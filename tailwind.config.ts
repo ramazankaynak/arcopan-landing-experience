@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        hero: "hsl(var(--hero-bg))",
+        "section-dark": "hsl(var(--section-dark))",
+        "section-light": "hsl(var(--section-light))",
+        glow: "hsl(var(--glow))",
       },
       borderRadius: {
         lg: "var(--radius)",
