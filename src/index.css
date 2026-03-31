@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,42 +6,45 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 30% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card: 210 20% 98%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 211 100% 40%;
+    /* Arcopan Teal */
+    --primary: 174 82% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 25% 95%;
-    --secondary-foreground: 220 30% 10%;
+    --secondary: 174 20% 95%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 215 20% 94%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 0 0% 53%;
 
-    --accent: 211 100% 50%;
+    /* Accent Orange */
+    --accent: 30 100% 35%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 211 100% 40%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 174 82% 24%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Arcopan custom tokens */
-    --hero-bg: 220 50% 3%;
-    --hero-overlay: 211 100% 40%;
-    --section-dark: 220 40% 5%;
-    --section-light: 215 25% 97%;
-    --glow: 211 100% 50%;
+    /* Arcopan Brand Tokens */
+    --primary-dark: 174 82% 17%;
+    --primary-light: 174 30% 93%;
+    --navy: 222 47% 11%;
+    --navy-light: 220 30% 18%;
+    --steel: 215 15% 50%;
+    --gold: 40 80% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -50,29 +53,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 220 40% 5%;
-    --foreground: 210 40% 98%;
-    --card: 220 35% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 35% 8%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217 30% 15%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 30% 15%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 211 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 30% 18%;
-    --input: 217 30% 18%;
-    --ring: 211 100% 50%;
+    --sidebar-ring: 174 82% 24%;
   }
 }
 
@@ -82,21 +63,18 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
   }
 }
 
 @layer utilities {
-  .text-glow {
-    text-shadow: 0 0 40px hsl(var(--glow) / 0.4);
-  }
-
-  .box-glow {
-    box-shadow: 0 0 30px hsl(var(--glow) / 0.3);
+  .font-mono-brand {
+    font-family: 'JetBrains Mono', monospace;
   }
 }
