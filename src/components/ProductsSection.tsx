@@ -1,79 +1,92 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import productPanels from "@/assets/product-panels.jpg";
 import productDoors from "@/assets/product-doors.jpg";
 import productCooling from "@/assets/product-cooling.jpg";
+import productRacking from "@/assets/product-racking.jpg";
 
-const products = [
+const categories = [
   {
-    title: "PUR/PIR Paneller",
-    description: "Maksimum ısı yalıtımı ve yangın dayanımı sunan endüstriyel çözümler.",
+    label: "Cold Storage & Insulation",
+    title: "Insulated Panels & Doors",
+    count: "3 products",
     image: productPanels,
+    href: "#",
   },
   {
-    title: "Sızdırmaz Kapılar",
-    description: "Isı köprüsü oluşturmayan, sızdırmaz sürgülü ve menteşeli sistemler.",
-    image: productDoors,
-  },
-  {
-    title: "Soğutma Grupları",
-    description: "Enerji tasarruflu, yüksek performanslı split ve monoblok üniteler.",
+    label: "Cooling & Refrigeration",
+    title: "Industrial Cooling Systems",
+    count: "3 products",
     image: productCooling,
+    href: "#",
+  },
+  {
+    label: "Warehouse & Racking",
+    title: "Racking & Dock Systems",
+    count: "4 products",
+    image: productRacking,
+    href: "#",
+  },
+  {
+    label: "Components & Accessories",
+    title: "Profiles, Curtains & Safety",
+    count: "3 products",
+    image: productDoors,
+    href: "#",
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" as const },
-  }),
-};
-
 const ProductsSection = () => {
   return (
-    <section id="products" className="py-24 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.h2
+    <section id="products" className="py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl font-bold text-foreground mb-16 text-center"
+          className="mb-14"
         >
-          Ürün Gruplarımız
-        </motion.h2>
+          <span className="font-mono text-xs tracking-widest uppercase text-primary mb-3 block">
+            Products
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground max-w-lg">
+            Industrial Cold Storage & Refrigeration Products
+          </h2>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {products.map((product, i) => (
-            <motion.div
-              key={product.title}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {categories.map((cat, i) => (
+            <motion.a
+              key={cat.title}
+              href={cat.href}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              variants={cardVariants}
-              whileHover={{ y: -8 }}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg shadow-foreground/5 group cursor-pointer border border-border"
+              transition={{ delay: i * 0.1 }}
+              className="group relative rounded-lg overflow-hidden aspect-[3/4] cursor-pointer"
             >
-              <div className="overflow-hidden h-56">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-7">
-                <h3 className="font-display text-xl font-semibold text-primary mb-2">
-                  {product.title}
+              <img
+                src={cat.image}
+                alt={cat.title}
+                loading="lazy"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <span className="font-mono text-[10px] tracking-widest uppercase text-primary block mb-1">
+                  {cat.label}
+                </span>
+                <h3 className="text-lg font-bold text-primary-foreground mb-1">
+                  {cat.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {product.description}
-                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-primary-foreground/50">{cat.count}</span>
+                  <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
