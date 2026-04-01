@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "eyebrow": "Industrial Cooling Engineering Partner — EMEA & Beyond",
+    "title1": "END-TO-END",
+    "title2": "COLD CHAIN",
+    "title3": "ENGINEERING",
+    "subtitle": "From feasibility to commissioning — one accountable partner for EPC firms, industrial investors and cold chain operators.",
+    "cta": "Request Engineering Consultation",
+    "secondary": "View Our Projects"
+  },
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "products": "Products",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "projects": "Projects",
+    "contact": "Contact",
+    "quote": "Request a Quote"
+  },
+  "stats": {
+    "projects": "Projects Completed",
+    "countries": "Countries Served",
+    "experience": "Years Experience",
+    "response": "Quote Response"
+  },
+  "why": {
+    "eyebrow": "Why ARCOPAN",
+    "title": "Built on Engineering Expertise. Trusted Across Industries.",
+    "v1_title": "End-to-End Cold Chain Coordination",
+    "v1_desc": "Single point of contact from feasibility and specification through procurement, installation, and commissioning.",
+    "v2_title": "Engineering Authority & Technical Depth",
+    "v2_desc": "PE-stamped specifications, compliance documentation, and thermal load engineering across all product lines.",
+    "v3_title": "International Project Experience",
+    "v3_desc": "Delivered projects across Europe, Middle East, Africa and the Caucasus with proven logistics capability.",
+    "v4_title": "Speed-to-Quote with Full Traceability",
+    "v4_desc": "RFQ response within 48 hours with full BOQ traceability and engineering documentation.",
+    "v5_title": "Integrated Industrial Cooling Systems",
+    "v5_desc": "Turnkey solutions integrating refrigeration, insulation, structural steel and logistics infrastructure.",
+    "brochure": "Download Capability Brochure"
+  },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Cold Storage Systems Engineered for Performance",
+    "chilled": "Chilled Storage (0/+4°C)",
+    "chilled_desc": "Temperature-controlled environments for fresh produce, dairy, and pharmaceutical storage with precision monitoring.",
+    "frozen": "Frozen Storage (-18/-25°C)",
+    "frozen_desc": "Full cold chain frozen storage systems for meat, seafood, and industrial food processing facilities.",
+    "blast": "Shock & Blast Freezing",
+    "blast_desc": "Rapid freeze technology for high-throughput processing lines with automated temperature profiling.",
+    "explore": "Explore Solution"
+  },
+  "products": {
+    "eyebrow": "Products",
+    "title": "Industrial Cold Storage & Refrigeration Products",
+    "cat1_label": "Cold Storage & Insulation",
+    "cat1_title": "Insulated Panels & Doors",
+    "cat2_label": "Cooling & Refrigeration",
+    "cat2_title": "Industrial Cooling Systems",
+    "cat3_label": "Warehouse & Racking",
+    "cat3_title": "Racking & Dock Systems",
+    "cat4_label": "Components & Accessories",
+    "cat4_title": "Profiles, Curtains & Safety"
+  },
+  "industries": {
+    "eyebrow": "Industries We Serve",
+    "title": "Sector-Specific Cold Chain Solutions",
+    "food": "Food & Beverage",
+    "meat": "Meat & Poultry",
+    "dairy": "Dairy",
+    "pharma": "Pharmaceuticals",
+    "logistics": "Logistics & Cold Chain",
+    "retail": "Retail & Supermarkets"
+  },
+  "projects_section": {
+    "eyebrow": "Featured Projects",
+    "title": "Delivered Across Industries",
+    "view_all": "View All Projects"
+  },
+  "trust": {
+    "label": "Certified & Compliant"
+  },
+  "cta": {
+    "title": "Ready to Engineer Your Cold Chain?",
+    "subtitle": "From feasibility assessment to final commissioning — submit your project requirements and receive an engineering consultation within 48 hours.",
+    "primary": "Submit Project RFQ",
+    "secondary": "Book a Consultation"
+  },
+  "footer": {
+    "description": "End-to-end cold chain engineering — from feasibility and specification through procurement, installation, and commissioning.",
+    "parent": "A brand of METKON ÇELİK YAPI VE LOJİSTİK AŞ",
+    "products_title": "Products",
+    "solutions_title": "Solutions",
+    "contact_title": "Contact",
+    "rights": "© 2026 ARCOPAN. All rights reserved."
+  }
+}

@@ -1,31 +1,16 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const projects = [
-  {
-    image: heroBg,
-    sector: "Food & Beverage",
-    name: "İstanbul Cold Chain Distribution Hub",
-    location: "İstanbul, Turkey",
-    year: "2025",
-  },
-  {
-    image: heroBg,
-    sector: "Meat & Poultry",
-    name: "Bucharest Blast Freezing Facility",
-    location: "Bucharest, Romania",
-    year: "2024",
-  },
-  {
-    image: heroBg,
-    sector: "Pharmaceuticals",
-    name: "Algiers GDP-Compliant Cold Store",
-    location: "Algiers, Algeria",
-    year: "2024",
-  },
+  { image: heroBg, sector: "Food & Beverage", name: "İstanbul Cold Chain Distribution Hub", location: "İstanbul, Turkey", year: "2025" },
+  { image: heroBg, sector: "Meat & Poultry", name: "Bucharest Blast Freezing Facility", location: "Bucharest, Romania", year: "2024" },
+  { image: heroBg, sector: "Pharmaceuticals", name: "Algiers GDP-Compliant Cold Store", location: "Algiers, Algeria", year: "2024" },
 ];
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="projects" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -37,17 +22,14 @@ const ProjectsSection = () => {
         >
           <div>
             <span className="font-mono text-xs tracking-widest uppercase text-primary mb-3 block">
-              Featured Projects
+              {t("projects_section.eyebrow")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Delivered Across Industries
+              {t("projects_section.title")}
             </h2>
           </div>
-          <a
-            href="#"
-            className="hidden md:inline-flex text-sm font-semibold text-primary hover:underline"
-          >
-            View All Projects →
+          <a href="#" className="hidden md:inline-flex text-sm font-semibold text-primary hover:underline">
+            {t("projects_section.view_all")} →
           </a>
         </motion.div>
 
@@ -62,24 +44,11 @@ const ProjectsSection = () => {
               className="group cursor-pointer"
             >
               <div className="overflow-hidden rounded-lg mb-4 aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  loading="lazy"
-                  width={800}
-                  height={450}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={project.image} alt={project.name} loading="lazy" width={800} height={450} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <span className="font-mono text-[10px] tracking-widest uppercase text-primary">
-                {project.sector}
-              </span>
-              <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">
-                {project.name}
-              </h3>
-              <p className="text-xs text-muted-foreground mt-1">
-                {project.location} · {project.year}
-              </p>
+              <span className="font-mono text-[10px] tracking-widest uppercase text-primary">{project.sector}</span>
+              <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">{project.name}</h3>
+              <p className="text-xs text-muted-foreground mt-1">{project.location} · {project.year}</p>
             </motion.div>
           ))}
         </div>

@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
-
-const stats = [
-  { value: "500+", label: "Projects Completed" },
-  { value: "25+", label: "Countries Served" },
-  { value: "30+", label: "Years Experience" },
-  { value: "48h", label: "Quote Response" },
-];
+import { useTranslation } from "react-i18next";
 
 const StatsBar = () => {
+  const { t } = useTranslation();
+
+  const stats = [
+    { value: "500+", label: t("stats.projects") },
+    { value: "25+", label: t("stats.countries") },
+    { value: "30+", label: t("stats.experience") },
+    { value: "48h", label: t("stats.response") },
+  ];
+
   return (
     <section className="bg-navy py-6">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x divide-primary-foreground/10">
           {stats.map((stat, i) => (
             <motion.div
-              key={stat.label}
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

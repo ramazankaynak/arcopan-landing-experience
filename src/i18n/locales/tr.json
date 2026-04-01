@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "eyebrow": "Endüstriyel Soğutma Mühendisliği Ortağı — EMEA ve Ötesi",
+    "title1": "UÇTAN UCA",
+    "title2": "SOĞUK ZİNCİR",
+    "title3": "MÜHENDİSLİĞİ",
+    "subtitle": "Fizibilite'den devreye almaya — EPC firmaları, endüstriyel yatırımcılar ve soğuk zincir operatörleri için tek sorumlu ortak.",
+    "cta": "Mühendislik Danışmanlığı Talep Edin",
+    "secondary": "Projelerimizi İnceleyin"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "company": "Hakkımızda",
+    "products": "Ürünler",
+    "solutions": "Çözümler",
+    "industries": "Sektörler",
+    "projects": "Projeler",
+    "contact": "İletişim",
+    "quote": "Teklif İsteyin"
+  },
+  "stats": {
+    "projects": "Tamamlanan Proje",
+    "countries": "Hizmet Verilen Ülke",
+    "experience": "Yıllık Deneyim",
+    "response": "Teklif Yanıt Süresi"
+  },
+  "why": {
+    "eyebrow": "Neden ARCOPAN",
+    "title": "Mühendislik Uzmanlığı Üzerine Kuruldu. Sektörler Genelinde Güvenilir.",
+    "v1_title": "Uçtan Uca Soğuk Zincir Koordinasyonu",
+    "v1_desc": "Fizibiliteden şartnameye, tedarikten kurulum ve devreye almaya kadar tek irtibat noktası.",
+    "v2_title": "Mühendislik Otoritesi & Teknik Derinlik",
+    "v2_desc": "PE onaylı şartnameler, uyumluluk belgeleri ve tüm ürün hatlarında termal yük mühendisliği.",
+    "v3_title": "Uluslararası Proje Deneyimi",
+    "v3_desc": "Avrupa, Orta Doğu, Afrika ve Kafkasya genelinde kanıtlanmış lojistik kapasiteyle projeler teslim edildi.",
+    "v4_title": "Tam İzlenebilirlikle Hızlı Teklif",
+    "v4_desc": "48 saat içinde tam BOQ izlenebilirliği ve mühendislik dokümantasyonu ile teklif yanıtı.",
+    "v5_title": "Entegre Endüstriyel Soğutma Sistemleri",
+    "v5_desc": "Soğutma, yalıtım, çelik yapı ve lojistik altyapısını entegre eden anahtar teslim çözümler.",
+    "brochure": "Yetkinlik Broşürünü İndirin"
+  },
+  "solutions": {
+    "eyebrow": "Çözümler",
+    "title": "Performans İçin Mühendislik Edilen Soğuk Hava Depoları",
+    "chilled": "Soğuk Depolama (0/+4°C)",
+    "chilled_desc": "Hassas izleme ile taze ürün, süt ürünleri ve ilaç depolama için sıcaklık kontrollü ortamlar.",
+    "frozen": "Donmuş Depolama (-18/-25°C)",
+    "frozen_desc": "Et, deniz ürünleri ve endüstriyel gıda işleme tesisleri için tam soğuk zincir donmuş depolama.",
+    "blast": "Şok & Hızlı Dondurma",
+    "blast_desc": "Otomatik sıcaklık profilleme ile yüksek üretim kapasiteli işleme hatları için hızlı dondurma teknolojisi.",
+    "explore": "Çözümü Keşfedin"
+  },
+  "products": {
+    "eyebrow": "Ürünler",
+    "title": "Endüstriyel Soğuk Hava Deposu & Soğutma Ürünleri",
+    "cat1_label": "Soğuk Depo & Yalıtım",
+    "cat1_title": "Yalıtım Panelleri & Kapılar",
+    "cat2_label": "Soğutma & Frigorifik",
+    "cat2_title": "Endüstriyel Soğutma Sistemleri",
+    "cat3_label": "Depo & Raf",
+    "cat3_title": "Raf & Dok Sistemleri",
+    "cat4_label": "Bileşenler & Aksesuarlar",
+    "cat4_title": "Profiller, Perdeler & Güvenlik"
+  },
+  "industries": {
+    "eyebrow": "Hizmet Verdiğimiz Sektörler",
+    "title": "Sektöre Özel Soğuk Zincir Çözümleri",
+    "food": "Gıda & İçecek",
+    "meat": "Et & Kümes Hayvanı",
+    "dairy": "Süt Ürünleri",
+    "pharma": "İlaç",
+    "logistics": "Lojistik & Soğuk Zincir",
+    "retail": "Perakende & Süpermarketler"
+  },
+  "projects_section": {
+    "eyebrow": "Öne Çıkan Projeler",
+    "title": "Sektörler Genelinde Teslim Edildi",
+    "view_all": "Tüm Projeleri Görüntüle"
+  },
+  "trust": {
+    "label": "Sertifikalı & Uyumlu"
+  },
+  "cta": {
+    "title": "Soğuk Zincirinizi Mühendislik Etmeye Hazır mısınız?",
+    "subtitle": "Fizibilite değerlendirmesinden son devreye almaya — proje gereksinimlerinizi gönderin ve 48 saat içinde mühendislik danışmanlığı alın.",
+    "primary": "Proje Teklif Talebi Gönderin",
+    "secondary": "Danışmanlık Randevusu Alın"
+  },
+  "footer": {
+    "description": "Fizibiliteden şartnameye, tedarikten kurulum ve devreye almaya kadar uçtan uca soğuk zincir mühendisliği.",
+    "parent": "METKON ÇELİK YAPI VE LOJİSTİK AŞ markasıdır",
+    "products_title": "Ürünler",
+    "solutions_title": "Çözümler",
+    "contact_title": "İletişim",
+    "rights": "© 2026 ARCOPAN. Tüm hakları saklıdır."
+  }
+}
