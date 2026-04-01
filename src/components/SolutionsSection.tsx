@@ -1,28 +1,16 @@
 import { motion } from "framer-motion";
 import { Thermometer, Snowflake, Zap, ArrowRight } from "lucide-react";
-
-const solutions = [
-  {
-    icon: Thermometer,
-    title: "Chilled Storage (0/+4°C)",
-    description: "Temperature-controlled environments for fresh produce, dairy, and pharmaceutical storage with precision monitoring.",
-    href: "#",
-  },
-  {
-    icon: Snowflake,
-    title: "Frozen Storage (-18/-25°C)",
-    description: "Full cold chain frozen storage systems for meat, seafood, and industrial food processing facilities.",
-    href: "#",
-  },
-  {
-    icon: Zap,
-    title: "Shock & Blast Freezing",
-    description: "Rapid freeze technology for high-throughput processing lines with automated temperature profiling.",
-    href: "#",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const SolutionsSection = () => {
+  const { t } = useTranslation();
+
+  const solutions = [
+    { icon: Thermometer, title: t("solutions.chilled"), description: t("solutions.chilled_desc"), href: "#" },
+    { icon: Snowflake, title: t("solutions.frozen"), description: t("solutions.frozen_desc"), href: "#" },
+    { icon: Zap, title: t("solutions.blast"), description: t("solutions.blast_desc"), href: "#" },
+  ];
+
   return (
     <section id="solutions" className="py-20 bg-card">
       <div className="max-w-7xl mx-auto px-6">
@@ -33,17 +21,17 @@ const SolutionsSection = () => {
           className="mb-14"
         >
           <span className="font-mono text-xs tracking-widest uppercase text-primary mb-3 block">
-            Solutions
+            {t("solutions.eyebrow")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground max-w-lg">
-            Cold Storage Systems Engineered for Performance
+            {t("solutions.title")}
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {solutions.map((sol, i) => (
             <motion.a
-              key={sol.title}
+              key={i}
               href={sol.href}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +47,7 @@ const SolutionsSection = () => {
                 {sol.description}
               </p>
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-primary-foreground transition-colors">
-                Explore Solution <ArrowRight className="w-4 h-4" />
+                {t("solutions.explore")} <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
           ))}
