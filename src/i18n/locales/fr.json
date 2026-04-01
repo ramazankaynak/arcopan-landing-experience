@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "eyebrow": "Partenaire d'Ingénierie de Refroidissement Industriel — EMEA et au-delà",
+    "title1": "INGÉNIERIE",
+    "title2": "CHAÎNE DU FROID",
+    "title3": "DE BOUT EN BOUT",
+    "subtitle": "De la faisabilité à la mise en service — un partenaire responsable pour les entreprises EPC, les investisseurs industriels et les opérateurs de la chaîne du froid.",
+    "cta": "Demander une Consultation",
+    "secondary": "Voir Nos Projets"
+  },
+  "nav": {
+    "home": "Accueil",
+    "company": "Entreprise",
+    "products": "Produits",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "projects": "Projets",
+    "contact": "Contact",
+    "quote": "Demander un Devis"
+  },
+  "stats": {
+    "projects": "Projets Réalisés",
+    "countries": "Pays Desservis",
+    "experience": "Années d'Expérience",
+    "response": "Réponse au Devis"
+  },
+  "why": {
+    "eyebrow": "Pourquoi ARCOPAN",
+    "title": "Fondé sur l'Expertise en Ingénierie. De Confiance dans Tous les Secteurs.",
+    "v1_title": "Coordination de la Chaîne du Froid de Bout en Bout",
+    "v1_desc": "Point de contact unique de la faisabilité à la spécification, en passant par l'approvisionnement, l'installation et la mise en service.",
+    "v2_title": "Autorité d'Ingénierie & Profondeur Technique",
+    "v2_desc": "Spécifications certifiées PE, documentation de conformité et ingénierie de charge thermique sur toutes les lignes de produits.",
+    "v3_title": "Expérience de Projet International",
+    "v3_desc": "Projets livrés en Europe, au Moyen-Orient, en Afrique et dans le Caucase avec une capacité logistique éprouvée.",
+    "v4_title": "Devis Rapide avec Traçabilité Complète",
+    "v4_desc": "Réponse au devis sous 48 heures avec traçabilité complète du BOQ et documentation d'ingénierie.",
+    "v5_title": "Systèmes de Refroidissement Industriels Intégrés",
+    "v5_desc": "Solutions clé en main intégrant réfrigération, isolation, structure en acier et infrastructure logistique.",
+    "brochure": "Télécharger la Brochure"
+  },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Systèmes de Stockage Froid Conçus pour la Performance",
+    "chilled": "Stockage Réfrigéré (0/+4°C)",
+    "chilled_desc": "Environnements à température contrôlée pour les produits frais, laitiers et le stockage pharmaceutique.",
+    "frozen": "Stockage Congelé (-18/-25°C)",
+    "frozen_desc": "Systèmes de stockage congelé pour la viande, les fruits de mer et les installations de transformation alimentaire.",
+    "blast": "Congélation par Choc & Rapide",
+    "blast_desc": "Technologie de congélation rapide pour les lignes de traitement à haut débit.",
+    "explore": "Explorer la Solution"
+  },
+  "products": {
+    "eyebrow": "Produits",
+    "title": "Produits Industriels de Stockage Froid & Réfrigération",
+    "cat1_label": "Stockage Froid & Isolation",
+    "cat1_title": "Panneaux Isolés & Portes",
+    "cat2_label": "Refroidissement & Réfrigération",
+    "cat2_title": "Systèmes de Refroidissement Industriels",
+    "cat3_label": "Entrepôt & Rayonnage",
+    "cat3_title": "Rayonnage & Systèmes de Quai",
+    "cat4_label": "Composants & Accessoires",
+    "cat4_title": "Profilés, Rideaux & Sécurité"
+  },
+  "industries": {
+    "eyebrow": "Industries Desservies",
+    "title": "Solutions de Chaîne du Froid Spécifiques au Secteur",
+    "food": "Alimentation & Boissons",
+    "meat": "Viande & Volaille",
+    "dairy": "Produits Laitiers",
+    "pharma": "Pharmaceutique",
+    "logistics": "Logistique & Chaîne du Froid",
+    "retail": "Commerce & Supermarchés"
+  },
+  "projects_section": {
+    "eyebrow": "Projets Phares",
+    "title": "Livrés dans Tous les Secteurs",
+    "view_all": "Voir Tous les Projets"
+  },
+  "trust": {
+    "label": "Certifié & Conforme"
+  },
+  "cta": {
+    "title": "Prêt à Concevoir Votre Chaîne du Froid ?",
+    "subtitle": "De l'évaluation de faisabilité à la mise en service finale — soumettez vos exigences de projet et recevez une consultation d'ingénierie sous 48 heures.",
+    "primary": "Soumettre une Demande de Devis",
+    "secondary": "Réserver une Consultation"
+  },
+  "footer": {
+    "description": "Ingénierie de chaîne du froid de bout en bout — de la faisabilité à la mise en service.",
+    "parent": "Une marque de METKON ÇELİK YAPI VE LOJİSTİK AŞ",
+    "products_title": "Produits",
+    "solutions_title": "Solutions",
+    "contact_title": "Contact",
+    "rights": "© 2026 ARCOPAN. Tous droits réservés."
+  }
+}

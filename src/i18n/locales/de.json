@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "eyebrow": "Industrieller Kühltechnik-Partner — EMEA und darüber hinaus",
+    "title1": "DURCHGÄNGIGE",
+    "title2": "KÜHLKETTEN-",
+    "title3": "TECHNIK",
+    "subtitle": "Von der Machbarkeit bis zur Inbetriebnahme — ein verantwortlicher Partner für EPC-Firmen, industrielle Investoren und Kühlkettenbetreber.",
+    "cta": "Ingenieursberatung Anfordern",
+    "secondary": "Unsere Projekte Ansehen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "company": "Unternehmen",
+    "products": "Produkte",
+    "solutions": "Lösungen",
+    "industries": "Branchen",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "quote": "Angebot Anfordern"
+  },
+  "stats": {
+    "projects": "Abgeschlossene Projekte",
+    "countries": "Betreute Länder",
+    "experience": "Jahre Erfahrung",
+    "response": "Angebotsantwort"
+  },
+  "why": {
+    "eyebrow": "Warum ARCOPAN",
+    "title": "Auf Ingenieurskompetenz gebaut. Branchenübergreifend vertraut.",
+    "v1_title": "Durchgängige Kühlketten-Koordination",
+    "v1_desc": "Ein Ansprechpartner von der Machbarkeit über die Beschaffung bis zur Installation und Inbetriebnahme.",
+    "v2_title": "Ingenieurskompetenz & Technische Tiefe",
+    "v2_desc": "PE-zertifizierte Spezifikationen, Compliance-Dokumentation und Wärmelastberechnung.",
+    "v3_title": "Internationale Projekterfahrung",
+    "v3_desc": "Projekte in Europa, Nahost, Afrika und dem Kaukasus mit bewährter Logistikkapazität.",
+    "v4_title": "Schnelle Angebote mit Rückverfolgbarkeit",
+    "v4_desc": "Angebotsantwort innerhalb von 48 Stunden mit vollständiger BOQ-Rückverfolgbarkeit.",
+    "v5_title": "Integrierte Industrielle Kühlsysteme",
+    "v5_desc": "Schlüsselfertige Lösungen mit Kühlung, Isolierung, Stahlbau und Logistikinfrastruktur.",
+    "brochure": "Kompetenzbroschüre Herunterladen"
+  },
+  "solutions": {
+    "eyebrow": "Lösungen",
+    "title": "Kühllager-Systeme für Höchstleistung",
+    "chilled": "Kühllager (0/+4°C)",
+    "chilled_desc": "Temperaturkontrollierte Umgebungen für Frischprodukte, Molkerei und Pharmalagerung.",
+    "frozen": "Tiefkühllager (-18/-25°C)",
+    "frozen_desc": "Komplette Tiefkühllager-Systeme für Fleisch, Meeresfrüchte und Lebensmittelverarbeitung.",
+    "blast": "Schock- & Schnellgefrierung",
+    "blast_desc": "Schnellgefriertechnologie für Hochdurchsatz-Verarbeitungslinien.",
+    "explore": "Lösung Erkunden"
+  },
+  "products": {
+    "eyebrow": "Produkte",
+    "title": "Industrielle Kühllager- & Kälteprodukte",
+    "cat1_label": "Kühllager & Isolierung",
+    "cat1_title": "Isolierpaneele & Türen",
+    "cat2_label": "Kühlung & Kältetechnik",
+    "cat2_title": "Industrielle Kühlsysteme",
+    "cat3_label": "Lager & Regale",
+    "cat3_title": "Regal- & Docksysteme",
+    "cat4_label": "Komponenten & Zubehör",
+    "cat4_title": "Profile, Vorhänge & Sicherheit"
+  },
+  "industries": {
+    "eyebrow": "Branchen",
+    "title": "Branchenspezifische Kühlkettenlösungen",
+    "food": "Lebensmittel & Getränke",
+    "meat": "Fleisch & Geflügel",
+    "dairy": "Molkereiprodukte",
+    "pharma": "Pharmazeutik",
+    "logistics": "Logistik & Kühlkette",
+    "retail": "Einzelhandel & Supermärkte"
+  },
+  "projects_section": {
+    "eyebrow": "Ausgewählte Projekte",
+    "title": "Branchenübergreifend Geliefert",
+    "view_all": "Alle Projekte Ansehen"
+  },
+  "trust": {
+    "label": "Zertifiziert & Konform"
+  },
+  "cta": {
+    "title": "Bereit für Ihre Kühlkette?",
+    "subtitle": "Von der Machbarkeitsstudie bis zur Inbetriebnahme — senden Sie Ihre Projektanforderungen und erhalten Sie innerhalb von 48 Stunden eine Ingenieursberatung.",
+    "primary": "Projektanfrage Senden",
+    "secondary": "Beratung Buchen"
+  },
+  "footer": {
+    "description": "Durchgängige Kühlkettentechnik — von der Machbarkeit bis zur Inbetriebnahme.",
+    "parent": "Eine Marke von METKON ÇELİK YAPI VE LOJİSTİK AŞ",
+    "products_title": "Produkte",
+    "solutions_title": "Lösungen",
+    "contact_title": "Kontakt",
+    "rights": "© 2026 ARCOPAN. Alle Rechte vorbehalten."
+  }
+}
