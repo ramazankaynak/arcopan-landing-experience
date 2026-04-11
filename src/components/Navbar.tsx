@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useTranslation } from "react-i18next";
 
 const languages = [
   { code: "en", label: "EN" },
