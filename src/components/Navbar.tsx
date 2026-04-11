@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
-import logo from "@/assets/logo.svg";
 import { useTranslation } from "react-i18next";
 
 const languages = [
@@ -84,13 +83,13 @@ const Navbar = () => {
 
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <img
-            src={logo}
-            alt="ARCOPAN"
-            className={`h-8 w-auto transition-all ${
-              scrolled ? "brightness-0" : "brightness-0 invert"
+          <span
+            className={`text-xl font-extrabold tracking-tight transition-colors ${
+              scrolled ? "text-primary" : "text-primary-foreground"
             }`}
-          />
+          >
+            ARCOPAN
+          </span>
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
