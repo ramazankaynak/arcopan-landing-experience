@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -10,9 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="text-xl font-extrabold tracking-tight text-primary-foreground">
-              ARCOPAN
-            </span>
+            <img
+              src={logo}
+              alt="ARCOPAN"
+              className="h-8 w-auto brightness-0 invert"
+            />
             <p className="text-sm text-primary-foreground/40 mt-3 max-w-xs leading-relaxed">
               {t("footer.description")}
             </p>
