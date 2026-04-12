@@ -2,13 +2,17 @@ import { motion } from "framer-motion";
 import { Thermometer, Snowflake, Zap, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import solChilled from "@/assets/solution-chilled.jpg";
+import solFrozen from "@/assets/solution-frozen.jpg";
+import solBlast from "@/assets/solution-blast.jpg";
+
 const SolutionsSection = () => {
   const { t } = useTranslation();
 
   const solutions = [
-    { icon: Thermometer, title: t("solutions.chilled"), description: t("solutions.chilled_desc"), href: "#" },
-    { icon: Snowflake, title: t("solutions.frozen"), description: t("solutions.frozen_desc"), href: "#" },
-    { icon: Zap, title: t("solutions.blast"), description: t("solutions.blast_desc"), href: "#" },
+    { icon: Thermometer, title: t("solutions.chilled"), description: t("solutions.chilled_desc"), href: "#", image: solChilled },
+    { icon: Snowflake, title: t("solutions.frozen"), description: t("solutions.frozen_desc"), href: "#", image: solFrozen },
+    { icon: Zap, title: t("solutions.blast"), description: t("solutions.blast_desc"), href: "#", image: solBlast },
   ];
 
   return (
@@ -37,18 +41,34 @@ const SolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-primary/5 border border-primary/10 rounded-lg p-8 hover:bg-primary hover:border-primary transition-all duration-300"
+              className="group relative rounded-lg overflow-hidden"
             >
-              <sol.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground mb-5 transition-colors" />
-              <h3 className="text-lg font-bold text-foreground group-hover:text-primary-foreground mb-2 transition-colors">
-                {sol.title}
-              </h3>
-              <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/70 leading-relaxed mb-4 transition-colors">
-                {sol.description}
-              </p>
-              <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-primary-foreground transition-colors">
-                {t("solutions.explore")} <ArrowRight className="w-4 h-4" />
-              </span>
+              {/* Background image */}
+              <div className="relative aspect-[4/5]">
+                <img
+                  src={sol.image}
+                  alt={sol.title}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent" />
+              </div>
+
+              {/* Content overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <sol.icon className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-lg font-bold text-primary-foreground mb-2">
+                  {sol.title}
+                </h3>
+                <p className="text-sm text-primary-foreground/70 leading-relaxed mb-4 line-clamp-3">
+                  {sol.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                  {t("solutions.explore")} <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
             </motion.a>
           ))}
         </div>
