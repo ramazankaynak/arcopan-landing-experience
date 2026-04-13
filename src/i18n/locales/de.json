@@ -60,7 +60,11 @@
     "cat3_label": "Lager & Regale",
     "cat3_title": "Regal- & Docksysteme",
     "cat4_label": "Komponenten & Zubehör",
-    "cat4_title": "Profile, Vorhänge & Sicherheit"
+    "cat4_title": "Profile, Vorhänge & Sicherheit",
+    "cat5_label": "Türen & Eingänge",
+    "cat5_title": "Kühlraumtüren",
+    "cat6_label": "Vorgefertigte Systeme",
+    "cat6_title": "Modulare Kühlräume"
   },
   "industries": {
     "eyebrow": "Branchen",

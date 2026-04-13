@@ -60,7 +60,11 @@
     "cat3_label": "Depo & Raf",
     "cat3_title": "Raf & Dok Sistemleri",
     "cat4_label": "Bileşenler & Aksesuarlar",
-    "cat4_title": "Profiller, Perdeler & Güvenlik"
+    "cat4_title": "Profiller, Perdeler & Güvenlik",
+    "cat5_label": "Kapılar & Girişler",
+    "cat5_title": "Soğuk Oda Kapıları",
+    "cat6_label": "Prefabrik Sistemler",
+    "cat6_title": "Modüler Soğuk Odalar"
   },
   "industries": {
     "eyebrow": "Hizmet Verdiğimiz Sektörler",
