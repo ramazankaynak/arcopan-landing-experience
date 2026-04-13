@@ -5,15 +5,19 @@ import productPanels from "@/assets/product-panels.jpg";
 import productDoors from "@/assets/product-doors.jpg";
 import productCooling from "@/assets/product-cooling.jpg";
 import productRacking from "@/assets/product-racking.jpg";
+import productColdroomDoors from "@/assets/product-coldroom-doors.jpg";
+import productModularColdroom from "@/assets/product-modular-coldroom.jpg";
 
 const ProductsSection = () => {
   const { t } = useTranslation();
 
   const categories = [
-    { label: t("products.cat1_label"), title: t("products.cat1_title"), count: "3 products", image: productPanels, href: "#" },
-    { label: t("products.cat2_label"), title: t("products.cat2_title"), count: "3 products", image: productCooling, href: "#" },
+    { label: t("products.cat1_label"), title: t("products.cat1_title"), count: "4 products", image: productPanels, href: "#" },
+    { label: t("products.cat5_label"), title: t("products.cat5_title"), count: "5 products", image: productColdroomDoors, href: "#" },
+    { label: t("products.cat6_label"), title: t("products.cat6_title"), count: "2 products", image: productModularColdroom, href: "#" },
+    { label: t("products.cat2_label"), title: t("products.cat2_title"), count: "5 products", image: productCooling, href: "#" },
     { label: t("products.cat3_label"), title: t("products.cat3_title"), count: "4 products", image: productRacking, href: "#" },
-    { label: t("products.cat4_label"), title: t("products.cat4_title"), count: "3 products", image: productDoors, href: "#" },
+    { label: t("products.cat4_label"), title: t("products.cat4_title"), count: "4 products", image: productDoors, href: "#" },
   ];
 
   return (
@@ -33,7 +37,7 @@ const ProductsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {categories.map((cat, i) => (
             <motion.a
               key={i}
