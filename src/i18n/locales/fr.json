@@ -60,7 +60,11 @@
     "cat3_label": "Entrepôt & Rayonnage",
     "cat3_title": "Rayonnage & Systèmes de Quai",
     "cat4_label": "Composants & Accessoires",
-    "cat4_title": "Profilés, Rideaux & Sécurité"
+    "cat4_title": "Profilés, Rideaux & Sécurité",
+    "cat5_label": "Portes & Entrées",
+    "cat5_title": "Portes de Chambres Froides",
+    "cat6_label": "Systèmes Préfabriqués",
+    "cat6_title": "Chambres Froides Modulaires"
   },
   "industries": {
     "eyebrow": "Industries Desservies",
