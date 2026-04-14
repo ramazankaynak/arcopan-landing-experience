@@ -18,46 +18,47 @@ const productGroups: ProductGroup[] = [
       { label: "Roof Panels", href: "/products/panels/roof-panels" },
       { label: "Wall Panels", href: "/products/panels/wall-panels" },
       { label: "Cold Room Panels", href: "/products/panels/cold-room-panels" },
+      { label: "Fire & Performance", href: "/products/panels/fire-performance-panels" },
     ],
   },
   {
     title: "Cold Room Systems",
     links: [
-      { label: "Cold Room Doors", href: "/products" },
-      { label: "Cold Room Accessories", href: "/products" },
-      { label: "Turnkey Solutions", href: "/products" },
+      { label: "Cold Room Doors", href: "/products/cold-room/doors" },
+      { label: "Cold Room Accessories", href: "/products/cold-room/accessories" },
+      { label: "Turnkey Solutions", href: "/products/cold-room/turnkey" },
     ],
   },
   {
     title: "Industrial Doors",
     links: [
-      { label: "Sectional Doors", href: "/products" },
-      { label: "Sliding Doors", href: "/products" },
-      { label: "Rapid Doors", href: "/products" },
+      { label: "Sectional Doors", href: "/products/industrial-doors/sectional" },
+      { label: "Sliding Doors", href: "/products/industrial-doors/sliding" },
+      { label: "Rapid Doors", href: "/products/industrial-doors/rapid" },
     ],
   },
   {
     title: "Racking & Storage",
     links: [
-      { label: "Pallet Racking", href: "/products" },
-      { label: "Shelving Systems", href: "/products" },
-      { label: "Warehouse Planning", href: "/products" },
+      { label: "Pallet Racking", href: "/products/racking/pallet-racking" },
+      { label: "Shelving Systems", href: "/products/racking/shelving" },
+      { label: "Warehouse Planning", href: "/products/racking/warehouse-planning" },
     ],
   },
   {
     title: "Accessories",
     links: [
-      { label: "Fasteners", href: "/products" },
-      { label: "Sealants", href: "/products" },
-      { label: "Flashings", href: "/products" },
+      { label: "Fasteners", href: "/products/accessories/fasteners" },
+      { label: "Sealants", href: "/products/accessories/sealants" },
+      { label: "Flashings", href: "/products/accessories/flashings" },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Technical Documents", href: "/products" },
-      { label: "Installation Guides", href: "/products" },
-      { label: "Request Consultation", href: "/products" },
+      { label: "Technical Documents", href: "/products/support/technical-documents" },
+      { label: "Installation Guides", href: "/products/support/installation-guides" },
+      { label: "Request Consultation", href: "/products/support/request-consultation" },
     ],
   },
 ];

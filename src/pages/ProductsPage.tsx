@@ -12,27 +12,27 @@ const categories = [
   {
     title: "Cold Room Systems",
     description: "Integrated cold room solutions for food, pharma and logistics.",
-    href: "/products",
+    href: "/products/cold-room/turnkey",
   },
   {
     title: "Industrial Doors",
     description: "Durable high-performance door options for demanding operations.",
-    href: "/products",
+    href: "/products/industrial-doors/sectional",
   },
   {
     title: "Racking & Storage",
     description: "Flexible storage systems tailored to warehouse workflows.",
-    href: "/products",
+    href: "/products/racking/warehouse-planning",
   },
   {
     title: "Accessories",
     description: "Installation components and finishing elements for full systems.",
-    href: "/products",
+    href: "/products/accessories/fasteners",
   },
   {
     title: "Technical Support",
     description: "Engineering guidance and documentation across product lines.",
-    href: "/products",
+    href: "/products/support/technical-documents",
   },
 ];
 
