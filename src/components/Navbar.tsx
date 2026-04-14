@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import ProductsMegaMenu from "./ProductsMegaMenu";
 
 const languages = [
   { code: "en", label: "EN" },
@@ -94,15 +95,22 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                scrolled ? "text-foreground" : "text-primary-foreground/80"
-              }`}
-            >
-              {item.label}
-            </a>
+            item.label === t("nav.products") ? (
+              <ProductsMegaMenu
+                key={item.label}
+                triggerClassName={scrolled ? "text-foreground" : "text-primary-foreground/80"}
+              />
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  scrolled ? "text-foreground" : "text-primary-foreground/80"
+                }`}
+              >
+                {item.label}
+              </a>
+            )
           ))}
           <div className="relative">
             <button
