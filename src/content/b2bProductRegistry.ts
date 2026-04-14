@@ -10,6 +10,10 @@ import industryFood from "@/assets/industry-food.jpg";
 import industryPharma from "@/assets/industry-pharma.jpg";
 import industryLogistics from "@/assets/industry-logistics.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import arcopanColdSandwichPanels from "@/assets/arcopan-web/Cold-Room-Sandwich-Panels.jpg";
+import arcopanColdFloor from "@/assets/arcopan-web/arcopan-plywood-floor.jpg";
+import arcopanModularColdBuild from "@/assets/arcopan-web/Col-Room-Build.jpg";
+import arcopanColdRoomDoors from "@/assets/arcopan-web/cold-room-doors-4.jpg";
 
 const euCompliance = [
   "Declaration of Performance (DoP) and CE marking supplied in line with EU CPR expectations for construction products — project-specific documentation issued with your order.",
@@ -85,7 +89,7 @@ export const panelProductDetails: Record<string, B2BProductDetail> = {
     familyLabel: "Insulated Panels",
     eyebrow: "Cold storage envelope",
     title: "Cold storage & hygienic sandwich panel systems",
-    heroImage: productCooling,
+    heroImage: arcopanColdSandwichPanels,
     heroAlt: "Cold storage and hygienic insulated sandwich panels",
     lead:
       "Complete cold-chain envelope solutions: PUR/PIR cold storage sandwich panels with food-safe facings, engineered for negative-temperature regimes, vapour control and rapid fit-out — including cam-lock vertical systems, matching floor panels and integration paths toward modular cold rooms.",
@@ -165,7 +169,7 @@ export const panelProductDetails: Record<string, B2BProductDetail> = {
     familyLabel: "Insulated Panels",
     eyebrow: "Cold room floor",
     title: "Cam-lock cold storage floor sandwich panels",
-    heroImage: solFrozen,
+    heroImage: arcopanColdFloor,
     heroAlt: "Insulated cold storage floor panel system",
     lead:
       "Structural insulated floor panels for cold rooms and freezer cells — cam-lock or matching joint philosophy aligned to wall panels, with facings selected for forklift traffic, hygiene and drainage coordination.",
@@ -271,7 +275,7 @@ export const lineProductDetails: Record<ProductLineId, Record<string, B2BProduct
       familyLabel: "Cold room systems",
       eyebrow: "Access & hygiene",
       title: "Cold room doors",
-      heroImage: productDoors,
+      heroImage: arcopanColdRoomDoors,
       heroAlt: "Industrial cold room door system",
       lead:
         "Hinged, sliding and vertical-lift cold room doors engineered for temperature integrity, traffic flow and food-safety conscious operations — sized for forklift and pallet jack regimes.",
@@ -332,8 +336,8 @@ export const lineProductDetails: Record<ProductLineId, Record<string, B2BProduct
       familyLabel: "Cold room systems",
       eyebrow: "Modular cold rooms",
       title: "Turnkey & modular cold room systems",
-      heroImage: industryFood,
-      heroAlt: "Food production facility modular cold rooms",
+      heroImage: arcopanModularColdBuild,
+      heroAlt: "Modular cold room construction and envelope",
       lead:
         "Modular cold room programmes combining cam-lock wall and ceiling panels, insulated floor panels, cold room doors and accessory kits — delivered as a coordinated envelope package with layout, thermal inputs, fabrication sequencing and site supervision aligned to EU EPC and investor handover standards.",
       body: [

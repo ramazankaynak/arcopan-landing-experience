@@ -8,9 +8,9 @@ import NotFound from "@/pages/NotFound";
 import { panelProductDetails, resolvePanelSlug } from "@/content/b2bProductRegistry";
 import productPanels from "@/assets/product-panels.jpg";
 import industryLogistics from "@/assets/industry-logistics.jpg";
-import productCooling from "@/assets/product-cooling.jpg";
 import solBlast from "@/assets/solution-blast.jpg";
-import solFrozen from "@/assets/solution-frozen.jpg";
+import arcopanColdSandwichPanels from "@/assets/arcopan-web/Cold-Room-Sandwich-Panels.jpg";
+import arcopanColdFloor from "@/assets/arcopan-web/arcopan-plywood-floor.jpg";
 
 const subcategories = [
   {
@@ -34,15 +34,15 @@ const subcategories = [
     slug: "coldroom-hygienic-panels",
     description: "Cold storage and hygienic envelopes: PUR/PIR sandwich panels with cam-lock joints for chill, frozen and controlled environments.",
     benefit: "Cold chain–ready; cam-lock vertical systems with modular room integration",
-    image: productCooling,
-    imageAlt: "Hygienic cold room panels",
+    image: arcopanColdSandwichPanels,
+    imageAlt: "Hygienic cold room sandwich panels",
   },
   {
     title: "Cam-Lock Cold Storage Floor Panels",
     slug: "cold-storage-floor-panels",
     description: "Insulated floor panels for freezer and cold store cells — aligned with wall cam-lock systems, traffic loads and drainage.",
     benefit: "Thermal continuity at wall–floor junctions; forklift-rated facing options",
-    image: solFrozen,
+    image: arcopanColdFloor,
     imageAlt: "Cold storage insulated floor panels",
   },
   {
