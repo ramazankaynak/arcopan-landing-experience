@@ -18,4 +18,6 @@ export type B2BProductDetail = {
   /** EU market framing — compliance-oriented, non-certifying */
   complianceNotes: string[];
   relatedInternal: { label: string; to: string }[];
+  /** Optional deep-dive blocks (e.g. system families, installation concepts) */
+  technicalSections?: { heading: string; paragraphs: string[] }[];
 };

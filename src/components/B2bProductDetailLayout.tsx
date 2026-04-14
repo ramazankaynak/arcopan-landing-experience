@@ -101,6 +101,30 @@ const B2bProductDetailLayout = ({ detail, secondaryCrumb }: Props) => {
         </div>
       </section>
 
+      {detail.technicalSections && detail.technicalSections.length > 0 && (
+        <section className="py-14 md:py-18 bg-muted/25 border-y border-border">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-primary mb-8">
+              System scope
+            </h2>
+            <div className="grid gap-10 md:grid-cols-2">
+              {detail.technicalSections.map((block) => (
+                <div key={block.heading} className="rounded-lg border border-border bg-background p-6">
+                  <h3 className="text-base font-bold text-foreground mb-4">{block.heading}</h3>
+                  <div className="space-y-3">
+                    {block.paragraphs.map((p, i) => (
+                      <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-14 md:py-18 bg-card">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-primary mb-6">

@@ -10,6 +10,7 @@ import productPanels from "@/assets/product-panels.jpg";
 import industryLogistics from "@/assets/industry-logistics.jpg";
 import productCooling from "@/assets/product-cooling.jpg";
 import solBlast from "@/assets/solution-blast.jpg";
+import solFrozen from "@/assets/solution-frozen.jpg";
 
 const subcategories = [
   {
@@ -31,10 +32,18 @@ const subcategories = [
   {
     title: "Cold Room & Hygienic Panels",
     slug: "coldroom-hygienic-panels",
-    description: "Food-grade and pharma-grade insulated panels for cold rooms, clean rooms and controlled environments.",
-    benefit: "HACCP & GDP compliant surfaces with cam-lock assembly",
+    description: "Cold storage and hygienic envelopes: PUR/PIR sandwich panels with cam-lock joints for chill, frozen and controlled environments.",
+    benefit: "Cold chain–ready; cam-lock vertical systems with modular room integration",
     image: productCooling,
     imageAlt: "Hygienic cold room panels",
+  },
+  {
+    title: "Cam-Lock Cold Storage Floor Panels",
+    slug: "cold-storage-floor-panels",
+    description: "Insulated floor panels for freezer and cold store cells — aligned with wall cam-lock systems, traffic loads and drainage.",
+    benefit: "Thermal continuity at wall–floor junctions; forklift-rated facing options",
+    image: solFrozen,
+    imageAlt: "Cold storage insulated floor panels",
   },
   {
     title: "Fire & Performance Panels",

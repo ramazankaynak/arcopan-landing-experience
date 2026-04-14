@@ -18,6 +18,7 @@ const productGroups: ProductGroup[] = [
       { label: "Roof Panels", href: "/products/panels/roof-panels" },
       { label: "Wall Panels", href: "/products/panels/wall-panels" },
       { label: "Cold Room Panels", href: "/products/panels/cold-room-panels" },
+      { label: "Cold Storage Floor Panels", href: "/products/panels/cold-storage-floor-panels" },
       { label: "Fire & Performance", href: "/products/panels/fire-performance-panels" },
     ],
   },

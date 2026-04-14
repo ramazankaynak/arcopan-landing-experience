@@ -83,36 +83,135 @@ export const panelProductDetails: Record<string, B2BProductDetail> = {
   },
   "coldroom-hygienic-panels": {
     familyLabel: "Insulated Panels",
-    eyebrow: "Controlled environment",
-    title: "Cold room & hygienic sandwich panels",
+    eyebrow: "Cold storage envelope",
+    title: "Cold storage & hygienic sandwich panel systems",
     heroImage: productCooling,
-    heroAlt: "Hygienic cold room insulated panel system",
+    heroAlt: "Cold storage and hygienic insulated sandwich panels",
     lead:
-      "Food-grade and pharma-grade insulated panels for temperature-controlled rooms, clean corridors and hygienic envelopes — cam-lock and overlapping joint systems for validated environments.",
+      "Complete cold-chain envelope solutions: PUR/PIR cold storage sandwich panels with food-safe facings, engineered for negative-temperature regimes, vapour control and rapid fit-out — including cam-lock vertical systems, matching floor panels and integration paths toward modular cold rooms.",
     body: [
-      "EPC-relevant scope: room layout optimisation, door coordination, floor/wall transitions and HACCP-conscious detailing without compromising thermal bridges.",
-      "Surface finishes selected for cleanability and chemical resistance; joint philosophy aligned to your qualification approach (IQ/OQ support documentation on request).",
+      "Cold storage panel systems combine structural skin, insulation core and factory-controlled joint geometry so thermal bridges, air leakage and condensation risk can be managed consistently across EU projects — from distribution hubs to food factories and pharma support spaces.",
+      "For EPC and design-build contractors we deliver coordinated shop drawings: wall and ceiling runs, door openings, floor–wall transitions, refrigeration penetrations and drainage kerbs, so refrigeration and MEP contractors can freeze designs earlier in the programme.",
+      "Surface specifications (stainless, coated steel, antibacterial or food-grade finishes) are selected against your HACCP walk routes, cleaning chemistry and GDP expectations — documentation structured for QA review, not generic marketing sheets.",
     ],
     keyBenefits: [
-      "HACCP- and GDP-aware surface options for EU food and pharma investors",
-      "Tight thermal performance for blast, chill and frozen regimes",
-      "Modular installation compatible with OEM equipment interfaces",
+      "Cam-lock and precision joint options for repeatable airtightness on vertical surfaces",
+      "Compatible specification routes for wall/ceiling and floor panels within the same cold room family",
+      "Modular, demount-friendly logic for expansion bays and future line changes",
+      "EU-oriented technical packs: DoP/CE context, traceability and installation method statements",
     ],
     specifications: [
-      { parameter: "Joint systems", value: "Cam-lock / overlap (project-specific)" },
-      { parameter: "Facing options", value: "Stainless, polyester, antibacterial coatings — specification led" },
-      { parameter: "Temperature classes", value: "Chill, frozen, blast — design verified per room load calculation" },
-      { parameter: "Vapour control", value: "Integrated vapour barrier concepts coordinated with MEP dew point checks" },
+      { parameter: "System families", value: "Cold storage sandwich panels; cam-lock wall/ceiling; matching cam-lock floor panels (see dedicated floor product page)" },
+      { parameter: "Joint types", value: "Cam-lock / tongue-and-groove with gasket; overlap variants where structural or hygiene detail requires" },
+      { parameter: "Core", value: "PUR / PIR — lambda and thickness per U-value target and deflection criteria" },
+      { parameter: "Facings", value: "Prepainted steel, PET/food-grade coatings, stainless — project-specific" },
+      { parameter: "Temperature scope", value: "Chill, frozen, blast — aligned to room load calculation and refrigeration duty" },
+      { parameter: "Floor interface", value: "Coordinated with insulated floor panels, kerbs, drains and racking post loads" },
+      { parameter: "Modular cold rooms", value: "Kit-based rooms: panels + floor + doors + accessories — see turnkey cold room scope" },
     ],
-    applications: ["Cold storage", "Food processing", "Pharma & life science", "Catering & central kitchens"],
+    applications: [
+      "Cold storage & deep-freeze",
+      "Food processing & packaging",
+      "Pharma & life science",
+      "Catering, central kitchens & 3PL",
+    ],
     complianceNotes: [
       ...euCompliance,
-      "Hygienic performance is specification-dependent; recommend early alignment with your food safety / QA team and cleaning chemistry.",
+      "Hygienic and food-contact suitability is always specification-dependent: align facings, joints and cleaning agents with your food safety plan early.",
+      "Structural and fire requirements vary by EU member state — national annexes and notified body routes are confirmed per project, not assumed from generic panel marketing.",
     ],
     relatedInternal: [
+      { label: "Cam-lock cold storage floor panels", to: "/products/panels/cold-storage-floor-panels" },
+      { label: "Modular / turnkey cold rooms", to: "/products/cold-room/turnkey" },
       { label: "Cold room doors", to: "/products/cold-room/doors" },
-      { label: "Turnkey cold room solutions", to: "/products/cold-room/turnkey" },
       { label: "All insulated panels", to: "/products/panels" },
+    ],
+    technicalSections: [
+      {
+        heading: "Cold storage panel systems",
+        paragraphs: [
+          "Cold storage sandwich panels are specified as the primary thermal envelope for controlled-temperature buildings: the outer and inner skins protect the core, while the core thickness and lambda value deliver the declared U-value used in energy and refrigeration load models.",
+          "Typical investor and EPC review points include: declared thermal performance under installed conditions (including fasteners and details), air permeability of joints, behaviour under negative pressure or blast freezing, and coordination with vapour barriers on the warm side of the envelope.",
+          "ARCOPAN supports tender-stage comparison matrices (core type, thickness, spanning assumptions, joint treatment) so owners can compare envelopes on a like-for-like basis before down-select.",
+        ],
+      },
+      {
+        heading: "Cam-lock wall & ceiling sandwich panels",
+        paragraphs: [
+          "Cam-lock (lever-lock) and similar mechanical locking profiles connect adjacent panels without exposing continuous through-metal paths at the primary joint. Gasketed seating surfaces help control air migration and moisture ingress at vertical joints — critical when rooms operate below dew point of adjacent spaces.",
+          "Wall and ceiling panels are sequenced from corners and openings toward field panels; door bucks, curtain rails and equipment hangers are coordinated so penetrations do not compromise the joint pattern or void warranty conditions.",
+          "Where cleanability audits apply, joint lines are reviewed against HACCP zoning — transitions to covings, kerbs and floor systems are detailed to avoid dirt traps and uncleanable recesses.",
+        ],
+      },
+      {
+        heading: "Cam-lock cold storage floor panels",
+        paragraphs: [
+          "Floor panels in cold rooms must resolve mechanical loads (forklifts, racking legs, point loads), thermal continuity with wall panels, slip resistance, drainage falls and sometimes heated perimeters or expansion joints.",
+          "Factory-formed cam-lock or matching tongue-and-groove floor panels allow the horizontal insulation layer to integrate with vertical panels, reducing ad hoc site detailing at the skirting zone — a frequent source of thermal bridge claims in cold store handover.",
+          "A dedicated product page covers load assumptions, facing options for heavy traffic, and typical interface details to drains and door thresholds.",
+        ],
+      },
+      {
+        heading: "Modular cold room systems",
+        paragraphs: [
+          "Modular cold rooms assemble pre-cut panels, floors, doors and accessory kits into defined volumes — suitable for phased capex, tenant fit-out inside a shell, or repeatable cell layouts in food and pharma.",
+          "Successful modular delivery depends on accurate survey, refrigeration set-point clarity, and MEP penetration schedules issued before panel fabrication — we align these inputs with EPC programme milestones.",
+          "For design-build scope, see turnkey cold room solutions: single coordination path for envelope performance, installation supervision and handover documentation.",
+        ],
+      },
+    ],
+  },
+  "cold-storage-floor-panels": {
+    familyLabel: "Insulated Panels",
+    eyebrow: "Cold room floor",
+    title: "Cam-lock cold storage floor sandwich panels",
+    heroImage: solFrozen,
+    heroAlt: "Insulated cold storage floor panel system",
+    lead:
+      "Structural insulated floor panels for cold rooms and freezer cells — cam-lock or matching joint philosophy aligned to wall panels, with facings selected for forklift traffic, hygiene and drainage coordination.",
+    body: [
+      "Cold store floors must bridge conflicting requirements: high insulation value, structural capacity, durable and cleanable wear surface, integration with door thresholds, and falls to drains without puncturing the vapour control strategy.",
+      "EPC teams benefit from a single envelope partner for wall, ceiling and floor panels: aligned core types, consistent joint language, and shop drawings that show how the horizontal insulation meets vertical corners, kerbs and expansion joints.",
+    ],
+    keyBenefits: [
+      "Thermal continuity with wall cam-lock systems at the skirting / coving zone",
+      "Facing options for heavy pallet and forklift traffic (subject to specification)",
+      "Coordinated details for drains, heating cables at openings and racking post reactions",
+      "Documentation suitable for cold store QA and maintenance manuals",
+    ],
+    specifications: [
+      { parameter: "Joint system", value: "Cam-lock / matching tongue-and-groove to align with wall panel family" },
+      { parameter: "Structural design", value: "Imposed loads, racking reactions and forklift classes — verified per project" },
+      { parameter: "Wear surface", value: "Anti-slip steel, stainless or specified food-grade finish — application dependent" },
+      { parameter: "Core", value: "PUR / PIR — thickness driven by U-value and load span" },
+      { parameter: "Drainage", value: "Falls, channel drains and kerb interfaces — coordinated with civil slab design" },
+      { parameter: "Thresholds", value: "Door rail, heater tape and airlock geometry coordinated with cold room doors" },
+    ],
+    applications: ["Deep-freeze stores", "Chilled distribution", "Food processing cells", "Blast tunnels & ante-rooms"],
+    complianceNotes: [
+      ...euCompliance,
+      "Slip resistance and cleanability claims must match your operational and cleaning SOPs — specify test methods and acceptance criteria in the employer’s requirements.",
+    ],
+    relatedInternal: [
+      { label: "Cold storage & hygienic wall/ceiling panels", to: "/products/panels/coldroom-hygienic-panels" },
+      { label: "Cold room doors", to: "/products/cold-room/doors" },
+      { label: "Turnkey modular cold rooms", to: "/products/cold-room/turnkey" },
+    ],
+    technicalSections: [
+      {
+        heading: "Why insulated floor panels in cold storage",
+        paragraphs: [
+          "A continuous insulated floor slab reduces frost heave risk, limits heat ingress from the ground or structural slab below, and provides a defined surface for hygiene and traffic loads.",
+          "Panelised floors can accelerate the critical path versus cast-in-place insulated slabs when room volumes are repetitive and tolerances are controlled in the factory.",
+        ],
+      },
+      {
+        heading: "Coordination with wall systems",
+        paragraphs: [
+          "The horizontal joint pattern should mate cleanly with vertical panel locks and corner pieces; mismatched systems often force site-built transitions that increase heat flow and cleaning risk.",
+          "ARCOPAN issues junction details for internal corners, external corners, door pockets and expansion joints as part of the envelope submittal — not as afterthought sketches on site.",
+        ],
+      },
     ],
   },
   "fire-performance-panels": {
@@ -194,7 +293,8 @@ export const lineProductDetails: Record<ProductLineId, Record<string, B2BProduct
       applications: ["Cold storage", "Processing plants", "Last-mile hubs", "Pharma cold chain"],
       complianceNotes: euCompliance,
       relatedInternal: [
-        { label: "Cold room panels", to: "/products/panels/coldroom-hygienic-panels" },
+        { label: "Cold storage & hygienic panels", to: "/products/panels/coldroom-hygienic-panels" },
+        { label: "Cam-lock floor panels", to: "/products/panels/cold-storage-floor-panels" },
         { label: "Cold room accessories", to: "/products/cold-room/accessories" },
         { label: "Turnkey cold rooms", to: "/products/cold-room/turnkey" },
       ],
@@ -224,35 +324,58 @@ export const lineProductDetails: Record<ProductLineId, Record<string, B2BProduct
       complianceNotes: euCompliance,
       relatedInternal: [
         { label: "Cold room doors", to: "/products/cold-room/doors" },
-        { label: "Hygienic panels", to: "/products/panels/coldroom-hygienic-panels" },
+        { label: "Hygienic & cold storage panels", to: "/products/panels/coldroom-hygienic-panels" },
+        { label: "Cam-lock floor panels", to: "/products/panels/cold-storage-floor-panels" },
       ],
     },
     turnkey: {
       familyLabel: "Cold room systems",
-      eyebrow: "Design-build",
-      title: "Turnkey cold room solutions",
+      eyebrow: "Modular cold rooms",
+      title: "Turnkey & modular cold room systems",
       heroImage: industryFood,
-      heroAlt: "Food production facility cold rooms",
+      heroAlt: "Food production facility modular cold rooms",
       lead:
-        "Room-in-room cold and hygienic envelopes delivered as a managed package — layout, thermal calculation, panel and door specification, and installation supervision for investor-grade handover.",
+        "Modular cold room programmes combining cam-lock wall and ceiling panels, insulated floor panels, cold room doors and accessory kits — delivered as a coordinated envelope package with layout, thermal inputs, fabrication sequencing and site supervision aligned to EU EPC and investor handover standards.",
       body: [
-        "Structured for EU EPC frameworks: clear design splits, milestone documentation, and commissioning support aligned to your validation strategy (where applicable).",
+        "Modular cold rooms reduce site risk when room counts, sizes and refrigeration classes are known early: panel kits are produced against frozen MEP penetration schedules and door schedules, limiting late changes that drive cost and programme.",
+        "Structured for EU EPC frameworks: clear design splits (employer vs contractor design), milestone submittals, O&M-oriented documentation and commissioning support aligned to your validation strategy where GxP applies.",
+        "Typical scope includes internal volumes for chill, frozen or blast regimes; ante-rooms and airlocks; hygienic transitions to production corridors; and coordination with racking, drainage and floor heating at openings.",
       ],
       keyBenefits: [
-        "Single point of coordination for envelope performance",
-        "Schedule certainty through prefabricated panel systems",
-        "Executive reporting suitable for lender / owner technical advisors",
+        "Single envelope partner for vertical panels, floor panels, doors and flashings",
+        "Repeatable room kits for multi-bay or phased rollout strategies",
+        "Executive reporting and document indices suitable for lender technical advisors",
+        "Less field fabrication at joints — improved predictability of U-value and airtightness testing",
       ],
       specifications: [
-        { parameter: "Typical deliverables", value: "Layout, thermal model inputs, BOM, installation method statements" },
-        { parameter: "Interfaces", value: "MEP, refrigeration, flooring, drainage — workshop-led" },
-        { parameter: "Geography", value: "EU and neighbouring markets — logistics plan per project" },
+        { parameter: "Modular kit scope", value: "Wall/ceiling panels, floor panels, doors, covings, flashings — per room matrix" },
+        { parameter: "Typical deliverables", value: "GA layouts, thermal model inputs, BOM, method statements, O&M binders" },
+        { parameter: "Interfaces", value: "Refrigeration, MEP, civil slab falls, drainage, racking — workshop-led" },
+        { parameter: "Geography", value: "EU and neighbouring markets — logistics and incoterms per contract" },
       ],
-      applications: ["Greenfield food plants", "Cold store expansion", "Pharma support", "3PL retrofit"],
+      applications: ["Greenfield food plants", "Cold store expansion", "Pharma & life science", "3PL retrofit & mezzanine cold cells"],
       complianceNotes: euCompliance,
       relatedInternal: [
+        { label: "Cold storage & hygienic panels", to: "/products/panels/coldroom-hygienic-panels" },
+        { label: "Cam-lock floor panels", to: "/products/panels/cold-storage-floor-panels" },
         { label: "Cold room doors", to: "/products/cold-room/doors" },
         { label: "Request consultation", to: "/products/support/request-consultation" },
+      ],
+      technicalSections: [
+        {
+          heading: "Modular cold room delivery model",
+          paragraphs: [
+            "Modular delivery starts from a room data sheet: dimensions, target temperature, pull-down assumptions, traffic type, hygiene class and future expansion intent. Those inputs drive panel thickness, core type, joint selection and door classes.",
+            "Fabrication batches are released against approved shop drawings; site receives numbered components and installation maps to reduce interpretation errors during critical path enclosure.",
+          ],
+        },
+        {
+          heading: "EPC integration",
+          paragraphs: [
+            "We align with your contract programme: long-lead panel releases, door deliveries, and soft-cut dates for refrigeration commissioning. RFIs are tracked against design freeze milestones so refrigeration contractors are not held by envelope ambiguity.",
+            "For brownfield sites, laser survey and as-built reconciliation are scheduled before final fabrication to avoid field cutting that voids performance assumptions.",
+          ],
+        },
       ],
     },
   },
