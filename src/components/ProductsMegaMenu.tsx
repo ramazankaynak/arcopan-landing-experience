@@ -1,65 +1,80 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
-type ProductLink = {
-  label: string;
-  href: string;
-};
+import imgPanels from "@/assets/arcopan-web/insulated-panels-cold-rooms-01.jpg";
+import imgColdRoom from "@/assets/arcopan-web/Cold-room.jpg";
+import imgDoors from "@/assets/arcopan-web/cold-room-doors.webp";
+import imgCooling from "@/assets/arcopan-web/CoolingUnits1.png";
 
-type ProductGroup = {
-  title: string;
-  links: ProductLink[];
-};
-
-const productGroups: ProductGroup[] = [
+const megaCategories = [
   {
     title: "Insulated Panels",
+    description:
+      "PUR/PIR sandwich panels for roof, wall, cold room and hygienic applications.",
+    image: imgPanels,
+    href: "/products/panels",
     links: [
       { label: "Roof Panels", href: "/products/panels/roof-panels" },
-      { label: "Wall Panels", href: "/products/panels/wall-panels" },
-      { label: "Cold Room Panels", href: "/products/panels/cold-room-panels" },
-      { label: "Cold Storage Floor Panels", href: "/products/panels/cold-storage-floor-panels" },
-      { label: "Fire & Performance", href: "/products/panels/fire-performance-panels" },
+      { label: "Wall Panels", href: "/products/panels/wall-facade-panels" },
+      {
+        label: "Cold Room Panels",
+        href: "/products/panels/coldroom-hygienic-panels",
+      },
+      {
+        label: "Cold Storage Floor",
+        href: "/products/panels/cold-storage-floor-panels",
+      },
+      {
+        label: "Fire & Performance",
+        href: "/products/panels/fire-performance-panels",
+      },
     ],
   },
   {
     title: "Cold Room Systems",
+    description:
+      "Turnkey cold storage — design, supply, installation and commissioning.",
+    image: imgColdRoom,
+    href: "/products/cold-room/turnkey",
     links: [
       { label: "Cold Room Doors", href: "/products/cold-room/doors" },
-      { label: "Cold Room Accessories", href: "/products/cold-room/accessories" },
+      { label: "Accessories", href: "/products/cold-room/accessories" },
       { label: "Turnkey Solutions", href: "/products/cold-room/turnkey" },
     ],
   },
   {
     title: "Industrial Doors",
+    description:
+      "Sectional, sliding and rapid doors for high-traffic industrial operations.",
+    image: imgDoors,
+    href: "/products/industrial-doors/sectional",
     links: [
-      { label: "Sectional Doors", href: "/products/industrial-doors/sectional" },
+      {
+        label: "Sectional Doors",
+        href: "/products/industrial-doors/sectional",
+      },
       { label: "Sliding Doors", href: "/products/industrial-doors/sliding" },
-      { label: "Rapid Doors", href: "/products/industrial-doors/rapid" },
+      { label: "Rapid Roll Doors", href: "/products/industrial-doors/rapid" },
     ],
   },
   {
-    title: "Racking & Storage",
+    title: "Cooling Systems",
+    description:
+      "Condensing units, evaporators and integrated refrigeration for cold chain.",
+    image: imgCooling,
+    href: "/products/cooling/industrial-cooling-systems",
     links: [
-      { label: "Pallet Racking", href: "/products/racking/pallet-racking" },
-      { label: "Shelving Systems", href: "/products/racking/shelving" },
-      { label: "Warehouse Planning", href: "/products/racking/warehouse-planning" },
-    ],
-  },
-  {
-    title: "Accessories",
-    links: [
-      { label: "Fasteners", href: "/products/accessories/fasteners" },
-      { label: "Sealants", href: "/products/accessories/sealants" },
-      { label: "Flashings", href: "/products/accessories/flashings" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Technical Documents", href: "/products/support/technical-documents" },
-      { label: "Installation Guides", href: "/products/support/installation-guides" },
-      { label: "Request Consultation", href: "/products/support/request-consultation" },
+      {
+        label: "Industrial Cooling",
+        href: "/products/cooling/industrial-cooling-systems",
+      },
+      { label: "Condensing Units", href: "/products/cooling/condensing-units" },
+      { label: "Evaporators", href: "/products/cooling/evaporators" },
+      {
+        label: "Refrigeration Accessories",
+        href: "/products/cooling/refrigeration-accessories",
+      },
     ],
   },
 ];
@@ -68,7 +83,9 @@ type ProductsMegaMenuProps = {
   triggerClassName?: string;
 };
 
-const ProductsMegaMenu = ({ triggerClassName = "text-foreground" }: ProductsMegaMenuProps) => {
+const ProductsMegaMenu = ({
+  triggerClassName = "text-foreground",
+}: ProductsMegaMenuProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -77,36 +94,112 @@ const ProductsMegaMenu = ({ triggerClassName = "text-foreground" }: ProductsMega
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
+      {/* Trigger */}
       <Link
         to="/products"
-        onClick={() => setOpen((current) => !current)}
-        className={`text-sm font-medium transition-colors hover:text-primary ${triggerClassName}`}
+        className={`inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${triggerClassName}`}
       >
         Products
+        <ChevronDown
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
       </Link>
 
+      {/* Dropdown panel */}
       {open && (
-        <div className="absolute top-full left-1/2 mt-4 w-[72rem] max-w-[90vw] -translate-x-1/2 rounded-lg border border-border bg-background p-6 shadow-2xl">
-          <div className="grid grid-cols-2 gap-6 xl:grid-cols-6">
-            {productGroups.map((group) => (
-              <div key={group.title}>
-                <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">
-                  {group.title}
-                </h4>
-                <ul className="space-y-2">
-                  {group.links.map((item) => (
-                    <li key={item.label}>
-                      <Link
-                        to={item.href}
-                        className="text-sm text-foreground/80 transition-colors hover:text-primary"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+        <div className="absolute top-full left-1/2 mt-3 w-[860px] max-w-[92vw] -translate-x-1/2 rounded-xl border border-border bg-background shadow-2xl overflow-hidden z-50">
+          {/* Header strip */}
+          <div className="px-6 py-3 border-b border-border bg-muted/40 flex items-center justify-between">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
+              Product Categories
+            </span>
+            <Link
+              to="/products"
+              className="text-[10px] font-mono text-primary hover:underline inline-flex items-center gap-1"
+            >
+              View all products <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* 4-column grid */}
+          <div className="grid grid-cols-4">
+            {megaCategories.map((cat, i) => (
+              <div
+                key={cat.title}
+                className={`group ${
+                  i < megaCategories.length - 1 ? "border-r border-border" : ""
+                }`}
+              >
+                {/* Image thumbnail */}
+                <Link
+                  to={cat.href}
+                  className="block overflow-hidden h-32 relative"
+                >
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute bottom-2 left-3">
+                    <span className="text-xs font-bold text-foreground">
+                      {cat.title}
+                    </span>
+                  </div>
+                </Link>
+
+                {/* Description + links */}
+                <div className="p-4">
+                  <p className="text-[11px] text-muted-foreground leading-relaxed mb-3">
+                    {cat.description}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {cat.links.map((link) => (
+                      <li key={link.label}>
+                        <Link
+                          to={link.href}
+                          className="text-[12px] text-foreground/75 hover:text-primary transition-colors flex items-center gap-1 group/link"
+                        >
+                          <span className="w-1 h-1 rounded-full bg-primary/40 group-hover/link:bg-primary transition-colors shrink-0" />
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to={cat.href}
+                    className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:gap-2 transition-all"
+                  >
+                    Explore all <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Footer strip */}
+          <div className="px-6 py-3 border-t border-border bg-muted/40 flex items-center gap-6">
+            <Link
+              to="/contact"
+              className="text-[11px] font-semibold text-primary hover:underline"
+            >
+              → Request Engineering Consultation
+            </Link>
+            <Link
+              to="/catalog"
+              className="text-[11px] text-muted-foreground hover:text-primary transition-colors"
+            >
+              Download Product Catalogue
+            </Link>
+            <Link
+              to="/products/support/technical-documents"
+              className="text-[11px] text-muted-foreground hover:text-primary transition-colors"
+            >
+              Technical Documents
+            </Link>
           </div>
         </div>
       )}

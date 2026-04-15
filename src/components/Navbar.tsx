@@ -31,7 +31,7 @@ const Navbar = () => {
     { label: t("nav.solutions"), href: "#solutions" },
     { label: t("nav.industries"), href: "#industries" },
     { label: t("nav.projects"), href: "#projects" },
-    { label: t("nav.contact"), href: "#contact" },
+    { label: t("nav.contact"), href: "/contact" },
   ];
 
   const currentLang = (i18n.language || "en").substring(0, 2).toUpperCase();
@@ -48,10 +48,22 @@ const Navbar = () => {
       }`}
     >
       {/* Top contact bar */}
-      <div className={`transition-all duration-300 overflow-hidden ${scrolled ? "h-0" : "h-8"}`}>
+      <div
+        className={`transition-all duration-300 overflow-hidden ${scrolled ? "h-0" : "h-8"}`}
+      >
         <div className="max-w-7xl mx-auto px-6 h-8 flex items-center justify-end gap-6 text-xs text-primary-foreground/60">
-          <a href="mailto:info@arcopan.com" className="font-mono hover:text-primary transition-colors">info@arcopan.com</a>
-          <a href="tel:+902622555640" className="font-mono hover:text-primary transition-colors">+90 262 255 56 40</a>
+          <a
+            href="mailto:info@arcopan.com"
+            className="font-mono hover:text-primary transition-colors"
+          >
+            info@arcopan.com
+          </a>
+          <a
+            href="tel:+902622555640"
+            className="font-mono hover:text-primary transition-colors"
+          >
+            +90 262 255 56 40
+          </a>
           <div className="relative hidden md:block">
             <button
               onClick={() => setLangOpen(!langOpen)}
@@ -70,7 +82,9 @@ const Navbar = () => {
                       setLangOpen(false);
                     }}
                     className={`block w-full text-left px-3 py-1.5 text-xs font-mono hover:bg-muted transition-colors ${
-                      i18n.language?.startsWith(lang.code) ? "text-primary font-bold" : "text-foreground"
+                      i18n.language?.startsWith(lang.code)
+                        ? "text-primary font-bold"
+                        : "text-foreground"
                     }`}
                   >
                     {lang.label}
@@ -94,11 +108,13 @@ const Navbar = () => {
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
+          {navItems.map((item) =>
             item.label === t("nav.products") ? (
               <ProductsMegaMenu
                 key={item.label}
-                triggerClassName={scrolled ? "text-foreground" : "text-primary-foreground/80"}
+                triggerClassName={
+                  scrolled ? "text-foreground" : "text-primary-foreground/80"
+                }
               />
             ) : (
               <a
@@ -110,8 +126,8 @@ const Navbar = () => {
               >
                 {item.label}
               </a>
-            )
-          ))}
+            ),
+          )}
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
@@ -132,7 +148,9 @@ const Navbar = () => {
                       setLangOpen(false);
                     }}
                     className={`block w-full text-left px-3 py-1.5 text-xs font-mono hover:bg-muted transition-colors ${
-                      i18n.language?.startsWith(lang.code) ? "text-primary font-bold" : "text-foreground"
+                      i18n.language?.startsWith(lang.code)
+                        ? "text-primary font-bold"
+                        : "text-foreground"
                     }`}
                   >
                     {lang.label}
@@ -142,7 +160,7 @@ const Navbar = () => {
             )}
           </div>
           <a
-            href="#contact"
+            href="/contact"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary-dark transition-colors"
           >
             {t("nav.quote")}
@@ -153,7 +171,11 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`lg:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
         >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </nav>
 
@@ -191,7 +213,7 @@ const Navbar = () => {
             ))}
           </div>
           <a
-            href="#contact"
+            href="/contact"
             onClick={() => setMobileOpen(false)}
             className="mt-4 block text-center bg-primary text-primary-foreground px-5 py-3 rounded-md text-sm font-semibold"
           >

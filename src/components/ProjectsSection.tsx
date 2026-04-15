@@ -1,11 +1,34 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import heroBg from "@/assets/hero-bg.jpg";
+import completedProject1 from "@/assets/arcopan-web/Completed-projects1.png";
+import completedProject2 from "@/assets/arcopan-web/Completed-projects2.png";
+import completedProject3 from "@/assets/arcopan-web/Completed-projects3.png";
 
 const projects = [
-  { image: heroBg, sector: "Food & Beverage", name: "İstanbul Cold Chain Distribution Hub", location: "İstanbul, Turkey", year: "2025" },
-  { image: heroBg, sector: "Meat & Poultry", name: "Bucharest Blast Freezing Facility", location: "Bucharest, Romania", year: "2024" },
-  { image: heroBg, sector: "Pharmaceuticals", name: "Algiers GDP-Compliant Cold Store", location: "Algiers, Algeria", year: "2024" },
+  {
+    image: completedProject1,
+    sector: "Food & Beverage",
+    name: "İstanbul Cold Chain Distribution Hub",
+    location: "İstanbul, Turkey",
+    year: "2025",
+    scope: "12,000 m² • PUR panels • Cooling systems",
+  },
+  {
+    image: completedProject2,
+    sector: "Meat & Poultry",
+    name: "Bucharest Blast Freezing Facility",
+    location: "Bucharest, Romania",
+    year: "2024",
+    scope: "Cold room panels • Blast tunnels • Doors",
+  },
+  {
+    image: completedProject3,
+    sector: "Pharmaceuticals",
+    name: "Algiers GDP-Compliant Cold Store",
+    location: "Algiers, Algeria",
+    year: "2024",
+    scope: "GDP certified • Temperature monitoring",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -28,7 +51,10 @@ const ProjectsSection = () => {
               {t("projects_section.title")}
             </h2>
           </div>
-          <a href="#" className="hidden md:inline-flex text-sm font-semibold text-primary hover:underline">
+          <a
+            href="#"
+            className="hidden md:inline-flex text-sm font-semibold text-primary hover:underline"
+          >
             {t("projects_section.view_all")} →
           </a>
         </motion.div>
@@ -44,11 +70,27 @@ const ProjectsSection = () => {
               className="group cursor-pointer"
             >
               <div className="overflow-hidden rounded-lg mb-4 aspect-video">
-                <img src={project.image} alt={project.name} loading="lazy" width={800} height={450} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  loading="lazy"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <span className="font-mono text-[10px] tracking-widest uppercase text-primary">{project.sector}</span>
-              <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">{project.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{project.location} · {project.year}</p>
+              <span className="font-mono text-[10px] tracking-widest uppercase text-primary">
+                {project.sector}
+              </span>
+              <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">
+                {project.name}
+              </h3>
+              <p className="text-xs text-muted-foreground mt-1">
+                {project.location} · {project.year}
+              </p>
+              <p className="text-[11px] text-primary/70 font-mono mt-1">
+                {project.scope}
+              </p>
             </motion.div>
           ))}
         </div>
