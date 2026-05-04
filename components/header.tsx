@@ -23,6 +23,7 @@ const productCategories = [
       { title: "Insulated Cold Storage Panels", href: "/products/insulated-cold-storage-panels", description: "High-performance panels for cold rooms" },
       { title: "Insulated Wall & Roof Panels", href: "/products/insulated-wall-roof-panels", description: "Thermal insulation solutions" },
       { title: "Insulated Cold Room Doors", href: "/products/insulated-cold-room-doors", description: "Energy-efficient door systems" },
+      { title: "Modular Cold Rooms", href: "/products/modular-cold-rooms", description: "Pre-fabricated cold room solutions" },
     ],
     icon: Snowflake,
   },
