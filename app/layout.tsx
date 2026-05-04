@@ -1,40 +1,36 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter'
+/* Rule 04 – Font Discipline: Inter 700 display / Inter 400–500 body / JetBrains Mono */
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin"],
-  variable: '--font-space-grotesk'
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'ARCOPAN | EU EPC Cold Storage Solutions',
-  description: 'ARCOPAN is a leading EU EPC company specializing in cold storage systems, insulated panels, cooling equipment, and warehouse solutions for food, pharma, and logistics industries.',
-  keywords: 'cold storage, insulated panels, refrigeration, EPC, EU, warehouse, cooling systems, food storage, pharmaceutical storage',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  description:
+    'ARCOPAN is an EU EPC company delivering turnkey cold storage systems, insulated panels, condensing units, and warehouse solutions across Europe.',
+  keywords:
+    'cold storage, insulated panels, EPC, condensing units, evaporators, cold room doors, modular cold rooms, warehouse racking, EU, industrial refrigeration',
+  openGraph: {
+    title: 'ARCOPAN | EU EPC Cold Storage Solutions',
+    description:
+      'Turnkey cold storage engineering, procurement, and construction. ISO 9001:2015 · CE · EN 14509.',
+    type: 'website',
   },
 }
 
@@ -44,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-background`}>
+      <body className="font-sans antialiased text-foreground">
         <Header />
         <main>{children}</main>
         <Footer />

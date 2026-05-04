@@ -14,44 +14,45 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
-import { Menu, Phone, Mail, Snowflake, Building2, Warehouse, Package, ChevronDown } from "lucide-react"
+import { Menu, Phone, Mail, Snowflake, Building2, Warehouse, Package, ChevronDown, ArrowRight } from "lucide-react"
 
+/* ── Mega-menu data ─────────────────────────────────────── */
 const productCategories = [
   {
     title: "Cold Storage & Insulation",
     items: [
-      { title: "Insulated Cold Storage Panels", href: "/products/insulated-cold-storage-panels", description: "High-performance panels for cold rooms" },
-      { title: "Insulated Wall & Roof Panels", href: "/products/insulated-wall-roof-panels", description: "Thermal insulation solutions" },
-      { title: "Insulated Cold Room Doors", href: "/products/insulated-cold-room-doors", description: "Energy-efficient door systems" },
-      { title: "Modular Cold Rooms", href: "/products/modular-cold-rooms", description: "Pre-fabricated cold room solutions" },
+      { title: "Insulated Cold Storage Panels", href: "/products/insulated-cold-storage-panels" },
+      { title: "Insulated Wall & Roof Panels",  href: "/products/insulated-wall-roof-panels" },
+      { title: "Insulated Cold Room Doors",     href: "/products/insulated-cold-room-doors" },
+      { title: "Modular Cold Rooms",            href: "/products/modular-cold-rooms" },
     ],
     icon: Snowflake,
   },
   {
     title: "Cooling & Refrigeration",
     items: [
-      { title: "Industrial Cooling Systems", href: "/products/industrial-cooling-systems", description: "Complete cooling solutions" },
-      { title: "Condensing Units", href: "/products/condensing-units", description: "High-efficiency condensers" },
-      { title: "Evaporators", href: "/products/evaporators", description: "Industrial evaporator units" },
+      { title: "Industrial Cooling Systems", href: "/products/industrial-cooling-systems" },
+      { title: "Condensing Units",           href: "/products/condensing-units" },
+      { title: "Evaporators",               href: "/products/evaporators" },
     ],
     icon: Building2,
   },
   {
     title: "Warehouse & Racking",
     items: [
-      { title: "Warehouse Racking Systems", href: "/products/warehouse-racking-systems", description: "Heavy-duty storage solutions" },
-      { title: "Market Racking Systems", href: "/products/market-racking-systems", description: "Retail display systems" },
-      { title: "Industrial Door Systems", href: "/products/industrial-door-systems", description: "High-speed industrial doors" },
-      { title: "Dock Leveller & Ramp Systems", href: "/products/dock-leveller-ramp-systems", description: "Loading dock equipment" },
+      { title: "Warehouse Racking Systems",   href: "/products/warehouse-racking-systems" },
+      { title: "Market Racking Systems",      href: "/products/market-racking-systems" },
+      { title: "Industrial Door Systems",     href: "/products/industrial-door-systems" },
+      { title: "Dock Leveller & Ramp Systems",href: "/products/dock-leveller-ramp-systems" },
     ],
     icon: Warehouse,
   },
   {
     title: "Components",
     items: [
-      { title: "Profiles & Fixings", href: "/products/profiles-fixings", description: "Structural components" },
-      { title: "PVC Strip Curtains", href: "/products/pvc-strip-curtains", description: "Temperature barrier solutions" },
-      { title: "Safety Accessories", href: "/products/safety-accessories", description: "Industrial safety equipment" },
+      { title: "Profiles & Fixings",   href: "/products/profiles-fixings" },
+      { title: "PVC Strip Curtains",   href: "/products/pvc-strip-curtains" },
+      { title: "Safety Accessories",   href: "/products/safety-accessories" },
     ],
     icon: Package,
   },
@@ -61,10 +62,10 @@ const solutionsItems = [
   {
     category: "Cold Storage Systems",
     items: [
-      { title: "Chilled Storage (0/+4°C)", href: "/solutions/chilled-storage" },
-      { title: "Frozen Storage (-18/-25°C)", href: "/solutions/frozen-storage" },
-      { title: "Shock/Blast Freezing", href: "/solutions/blast-freezing" },
-      { title: "Food Logistics Cold Stores", href: "/solutions/food-logistics" },
+      { title: "Chilled Storage (0 / +4 °C)",  href: "/solutions/chilled-storage" },
+      { title: "Frozen Storage (−18 / −25 °C)", href: "/solutions/frozen-storage" },
+      { title: "Shock / Blast Freezing",        href: "/solutions/blast-freezing" },
+      { title: "Food-Logistics Cold Stores",    href: "/solutions/food-logistics" },
     ],
   },
   {
@@ -77,119 +78,181 @@ const solutionsItems = [
 ]
 
 const industriesItems = [
-  { title: "Food & Beverage", href: "/industries/food-beverage" },
-  { title: "Meat & Poultry", href: "/industries/meat-poultry" },
-  { title: "Dairy", href: "/industries/dairy" },
-  { title: "Pharmaceuticals", href: "/industries/pharmaceuticals" },
+  { title: "Food & Beverage",        href: "/industries/food-beverage" },
+  { title: "Meat & Poultry",         href: "/industries/meat-poultry" },
+  { title: "Dairy",                  href: "/industries/dairy" },
+  { title: "Pharmaceuticals",        href: "/industries/pharmaceuticals" },
   { title: "Logistics & Cold Chain", href: "/industries/logistics" },
-  { title: "Retail & Supermarkets", href: "/industries/retail" },
+  { title: "Retail & Supermarkets",  href: "/industries/retail" },
 ]
 
 const companyItems = [
-  { title: "About Arcopan", href: "/company/about" },
-  { title: "Our Engineering Team", href: "/company/team" },
-  { title: "Quality & Certifications", href: "/company/quality" },
-  { title: "Sustainability", href: "/company/sustainability" },
+  { title: "About Arcopan",          href: "/company/about" },
+  { title: "Our Engineering Team",   href: "/company/team" },
+  { title: "Quality & Certifications",href: "/company/quality" },
+  { title: "Sustainability",         href: "/company/sustainability" },
 ]
 
+/* ── Component ──────────────────────────────────────────── */
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 8)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled 
-        ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border" 
-        : "bg-transparent"
-    )}>
-      {/* Top Bar */}
-      <div className={cn(
-        "hidden lg:block border-b transition-colors",
-        isScrolled ? "border-border bg-muted/50" : "border-white/10 bg-primary/5"
-      )}>
-        <div className="container mx-auto px-6 py-2 flex items-center justify-between text-sm">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
+        isScrolled
+          ? "bg-white/97 backdrop-blur-sm shadow-[0_1px_0_0_#CBD5E1]"
+          : "bg-[#0D2B45]",
+      )}
+    >
+      {/* ── Top utility bar ── */}
+      <div
+        className={cn(
+          "hidden lg:block border-b text-[13px] transition-colors",
+          isScrolled
+            ? "border-[#CBD5E1] bg-[#F1F5F9] text-[#64748B]"
+            : "border-white/10 bg-[#091D30] text-white/60",
+        )}
+      >
+        <div className="container mx-auto px-6 py-1.5 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="tel:+902123456789" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="h-3.5 w-3.5" />
-              <span>+90 212 345 67 89</span>
+            <a
+              href="tel:+902123456789"
+              className={cn(
+                "flex items-center gap-1.5 transition-colors",
+                isScrolled ? "hover:text-[#0E7490]" : "hover:text-white",
+              )}
+            >
+              <Phone className="h-3 w-3" />
+              +90 212 345 67 89
             </a>
-            <a href="mailto:info@arcopan.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="h-3.5 w-3.5" />
-              <span>info@arcopan.com</span>
+            <a
+              href="mailto:info@arcopan.com"
+              className={cn(
+                "flex items-center gap-1.5 transition-colors",
+                isScrolled ? "hover:text-[#0E7490]" : "hover:text-white",
+              )}
+            >
+              <Mail className="h-3 w-3" />
+              info@arcopan.com
             </a>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="text-muted-foreground">EU EPC Certified</span>
-            <div className="h-4 w-px bg-border" />
-            <span className="text-muted-foreground">ISO 9001:2015</span>
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-[11px] tracking-wide">ISO 9001:2015</span>
+            <span className="text-current/30">·</span>
+            <span className="font-mono text-[11px] tracking-wide">CE Marking</span>
+            <span className="text-current/30">·</span>
+            <span className="font-mono text-[11px] tracking-wide">EN 14509</span>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* ── Main navigation ── */}
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[60px]">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Snowflake className="h-6 w-6 text-primary-foreground" />
-              </div>
+          <Link href="/" className="flex items-center gap-3 shrink-0">
+            <div className={cn(
+              "w-9 h-9 rounded flex items-center justify-center transition-colors",
+              isScrolled ? "bg-[#0E7490]" : "bg-white/10",
+            )}>
+              <Snowflake className={cn("h-5 w-5", isScrolled ? "text-white" : "text-white")} />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-foreground">ARCOPAN</span>
-              <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Cold Storage Solutions</span>
+            <div className="flex flex-col leading-none">
+              <span className={cn(
+                "text-[17px] font-bold tracking-[0.08em] uppercase transition-colors",
+                isScrolled ? "text-[#0D2B45]" : "text-white",
+              )}>
+                ARCOPAN
+              </span>
+              <span className={cn(
+                "text-[9px] font-mono tracking-[0.25em] uppercase transition-colors",
+                isScrolled ? "text-[#64748B]" : "text-white/50",
+              )}>
+                COOLING PARTNER
+              </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav — Rule 06: Steel for nav */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
+
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "text-[13px] font-medium transition-colors bg-transparent hover:bg-transparent",
+                      isScrolled
+                        ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                        : "text-white/80 hover:text-white",
+                    )}
+                  >
                     Home
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
+              {/* Company */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "text-[13px] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent",
+                    isScrolled
+                      ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                      : "text-white/80 hover:text-white",
+                  )}
+                >
+                  Company
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4">
+                  <ul className="w-[260px] p-2">
                     {companyItems.map((item) => (
-                      <ListItem key={item.title} title={item.title} href={item.href} />
+                      <NavItem key={item.title} title={item.title} href={item.href} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Products – 4-column mega menu */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "text-[13px] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent",
+                    isScrolled
+                      ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                      : "text-white/80 hover:text-white",
+                  )}
+                >
+                  Products
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[900px] p-6">
-                    <div className="grid grid-cols-4 gap-6">
-                      {productCategories.map((category) => (
-                        <div key={category.title} className="space-y-3">
-                          <div className="flex items-center gap-2 pb-2 border-b border-border">
-                            <category.icon className="h-4 w-4 text-primary" />
-                            <h3 className="font-semibold text-sm text-foreground">{category.title}</h3>
+                  <div className="w-[860px] p-5">
+                    <div className="grid grid-cols-4 gap-5">
+                      {productCategories.map((cat) => (
+                        <div key={cat.title}>
+                          <div className="flex items-center gap-1.5 mb-2.5 pb-2 border-b border-[#E2E8F0]">
+                            <cat.icon className="h-3.5 w-3.5 text-[#0E7490]" />
+                            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#1E3A5F]">
+                              {cat.title}
+                            </span>
                           </div>
-                          <ul className="space-y-2">
-                            {category.items.map((item) => (
+                          <ul className="space-y-1.5">
+                            {cat.items.map((item) => (
                               <li key={item.title}>
-                                <Link 
+                                <Link
                                   href={item.href}
-                                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                                  className="block text-[13px] text-[#64748B] hover:text-[#0E7490] transition-colors py-0.5"
                                 >
                                   {item.title}
                                 </Link>
@@ -199,31 +262,52 @@ export function Header() {
                         </div>
                       ))}
                     </div>
-                    <div className="mt-6 pt-4 border-t border-border">
-                      <Link href="/products" className="text-sm text-primary hover:underline">
-                        View All Products →
+                    <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex items-center justify-between">
+                      <Link
+                        href="/products"
+                        className="text-[13px] text-[#0E7490] font-medium hover:underline flex items-center gap-1"
+                      >
+                        View all products <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                      {/* Rule 06 – Amber: persistent Quote CTA */}
+                      <Link
+                        href="/get-a-quote"
+                        className="btn-quote flex items-center gap-1.5 text-[13px]"
+                      >
+                        Request Engineering Consultation
+                        <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Solutions */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "text-[13px] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent",
+                    isScrolled
+                      ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                      : "text-white/80 hover:text-white",
+                  )}
+                >
+                  Solutions
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-6">
-                    <div className="grid grid-cols-2 gap-6">
+                  <div className="w-[480px] p-5">
+                    <div className="grid grid-cols-2 gap-5">
                       {solutionsItems.map((section) => (
-                        <div key={section.category} className="space-y-3">
-                          <h3 className="font-semibold text-sm text-foreground border-b border-border pb-2">
+                        <div key={section.category}>
+                          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#1E3A5F] mb-2.5 pb-2 border-b border-[#E2E8F0]">
                             {section.category}
-                          </h3>
-                          <ul className="space-y-2">
+                          </p>
+                          <ul className="space-y-1.5">
                             {section.items.map((item) => (
                               <li key={item.title}>
-                                <Link 
+                                <Link
                                   href={item.href}
-                                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                                  className="block text-[13px] text-[#64748B] hover:text-[#0E7490] transition-colors py-0.5"
                                 >
                                   {item.title}
                                 </Link>
@@ -237,69 +321,95 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Industries */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "text-[13px] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent",
+                    isScrolled
+                      ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                      : "text-white/80 hover:text-white",
+                  )}
+                >
+                  Industries
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
+                  <ul className="w-[380px] p-2 grid grid-cols-2">
                     {industriesItems.map((item) => (
-                      <ListItem key={item.title} title={item.title} href={item.href} />
+                      <NavItem key={item.title} title={item.title} href={item.href} />
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Projects */}
               <NavigationMenuItem>
                 <Link href="/projects" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "text-[13px] font-medium bg-transparent hover:bg-transparent",
+                      isScrolled
+                        ? "text-[#1E3A5F] hover:text-[#0E7490]"
+                        : "text-white/80 hover:text-white",
+                    )}
+                  >
                     Projects
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button variant="default" size="default" asChild>
-              <Link href="/get-a-quote">Get a Quote &rarr;</Link>
-            </Button>
+          {/* Right: Amber Quote CTA (Rule 06 – persistent) */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/get-a-quote"
+              className="btn-quote flex items-center gap-1.5"
+            >
+              Get a Quote <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile trigger */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className={isScrolled ? "text-[#0D2B45]" : "text-white"}
+              >
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[400px] overflow-y-auto">
+            <SheetContent side="right" className="w-full sm:w-[360px] overflow-y-auto bg-white">
               <SheetHeader>
-                <SheetTitle className="flex items-center gap-2">
-                  <Snowflake className="h-5 w-5 text-primary" />
-                  ARCOPAN
+                <SheetTitle className="flex items-center gap-2 text-[#0D2B45]">
+                  <div className="w-7 h-7 rounded bg-[#0E7490] flex items-center justify-center">
+                    <Snowflake className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-[15px] font-bold tracking-wide">ARCOPAN</span>
                 </SheetTitle>
               </SheetHeader>
-              <div className="mt-8 space-y-6">
-                <Link 
-                  href="/" 
-                  className="block text-lg font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+
+              <div className="mt-6 space-y-5">
+                <Link href="/" className="block text-[15px] font-medium text-[#0D2B45]" onClick={() => setMobileMenuOpen(false)}>
                   Home
                 </Link>
 
-                <MobileMenuSection title="Company" items={companyItems} onClose={() => setMobileMenuOpen(false)} />
-                
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">Products</h3>
-                  {productCategories.map((category) => (
-                    <div key={category.title} className="pl-4 space-y-2">
-                      <h4 className="text-sm font-medium text-muted-foreground">{category.title}</h4>
-                      {category.items.map((item) => (
-                        <Link 
+                <MobileSection title="Company" items={companyItems} onClose={() => setMobileMenuOpen(false)} />
+
+                <div className="space-y-2">
+                  <p className="text-[15px] font-medium text-[#0D2B45]">Products</p>
+                  {productCategories.map((cat) => (
+                    <div key={cat.title} className="pl-3 space-y-1.5">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-[#1E3A5F]">{cat.title}</p>
+                      {cat.items.map((item) => (
+                        <Link
                           key={item.title}
                           href={item.href}
-                          className="block text-sm text-muted-foreground hover:text-primary pl-2"
+                          className="block text-[13px] text-[#64748B] hover:text-[#0E7490] pl-2"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {item.title}
@@ -309,16 +419,16 @@ export function Header() {
                   ))}
                 </div>
 
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">Solutions</h3>
-                  {solutionsItems.map((section) => (
-                    <div key={section.category} className="pl-4 space-y-2">
-                      <h4 className="text-sm font-medium text-muted-foreground">{section.category}</h4>
-                      {section.items.map((item) => (
-                        <Link 
+                <div className="space-y-2">
+                  <p className="text-[15px] font-medium text-[#0D2B45]">Solutions</p>
+                  {solutionsItems.map((sec) => (
+                    <div key={sec.category} className="pl-3 space-y-1.5">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-[#1E3A5F]">{sec.category}</p>
+                      {sec.items.map((item) => (
+                        <Link
                           key={item.title}
                           href={item.href}
-                          className="block text-sm text-muted-foreground hover:text-primary pl-2"
+                          className="block text-[13px] text-[#64748B] hover:text-[#0E7490] pl-2"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {item.title}
@@ -328,28 +438,27 @@ export function Header() {
                   ))}
                 </div>
 
-                <MobileMenuSection title="Industries" items={industriesItems} onClose={() => setMobileMenuOpen(false)} />
+                <MobileSection title="Industries" items={industriesItems} onClose={() => setMobileMenuOpen(false)} />
 
-                <Link 
-                  href="/projects" 
-                  className="block text-lg font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link href="/projects" className="block text-[15px] font-medium text-[#0D2B45]" onClick={() => setMobileMenuOpen(false)}>
                   Projects
                 </Link>
 
-                <div className="pt-6 border-t border-border space-y-4">
-                  <Button className="w-full" size="lg" asChild>
-                    <Link href="/get-a-quote" onClick={() => setMobileMenuOpen(false)}>Get a Quote &rarr;</Link>
-                  </Button>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+                <div className="pt-5 border-t border-[#E2E8F0] space-y-3">
+                  {/* Amber CTA – Rule 06 */}
+                  <Link
+                    href="/get-a-quote"
+                    className="btn-quote flex items-center justify-center gap-2 w-full py-2.5 text-center"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Request Engineering Consultation <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <div className="space-y-2 text-[13px] text-[#64748B]">
                     <a href="tel:+902123456789" className="flex items-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      +90 212 345 67 89
+                      <Phone className="h-3.5 w-3.5" /> +90 212 345 67 89
                     </a>
                     <a href="mailto:info@arcopan.com" className="flex items-center gap-2">
-                      <Mail className="h-4 w-4" />
-                      info@arcopan.com
+                      <Mail className="h-3.5 w-3.5" /> info@arcopan.com
                     </a>
                   </div>
                 </div>
@@ -362,62 +471,52 @@ export function Header() {
   )
 }
 
-const ListItem = React.forwardRef<
+/* ── Sub-components ──────────────────────────────────────── */
+const NavItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { title: string }
->(({ className, title, children, href, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link
-          ref={ref}
-          href={href || "#"}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          {children && (
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          )}
-        </Link>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
-
-function MobileMenuSection({ 
-  title, 
-  items, 
-  onClose 
-}: { 
-  title: string
-  items: { title: string; href: string }[]
-  onClose: () => void 
-}) {
-  const [isOpen, setIsOpen] = React.useState(false)
-
-  return (
-    <div className="space-y-2">
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full text-lg font-medium"
+>(({ title, href, ...props }, ref) => (
+  <li>
+    <NavigationMenuLink asChild>
+      <Link
+        ref={ref}
+        href={href || "#"}
+        className="block select-none rounded px-3 py-2 text-[13px] text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0E7490] transition-colors leading-none no-underline outline-none"
+        {...props}
       >
         {title}
-        <ChevronDown className={cn("h-5 w-5 transition-transform", isOpen && "rotate-180")} />
+      </Link>
+    </NavigationMenuLink>
+  </li>
+))
+NavItem.displayName = "NavItem"
+
+function MobileSection({
+  title,
+  items,
+  onClose,
+}: {
+  title: string
+  items: { title: string; href: string }[]
+  onClose: () => void
+}) {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <div className="space-y-2">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center justify-between w-full text-[15px] font-medium text-[#0D2B45]"
+      >
+        {title}
+        <ChevronDown className={cn("h-4 w-4 transition-transform text-[#64748B]", open && "rotate-180")} />
       </button>
-      {isOpen && (
-        <div className="pl-4 space-y-2">
+      {open && (
+        <div className="pl-3 space-y-1.5">
           {items.map((item) => (
-            <Link 
+            <Link
               key={item.title}
               href={item.href}
-              className="block text-sm text-muted-foreground hover:text-primary"
+              className="block text-[13px] text-[#64748B] hover:text-[#0E7490]"
               onClick={onClose}
             >
               {item.title}

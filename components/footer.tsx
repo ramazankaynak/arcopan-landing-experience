@@ -68,7 +68,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight">ARCOPAN</span>
-                <span className="text-[10px] uppercase tracking-widest text-background/60">Cold Storage Solutions</span>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-background/60">Cooling Partner</span>
               </div>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
