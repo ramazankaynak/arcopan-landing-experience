@@ -260,8 +260,8 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="default" size="default">
-              Get a Quote
+            <Button variant="default" size="default" asChild>
+              <Link href="/get-a-quote">Get a Quote &rarr;</Link>
             </Button>
           </div>
 
@@ -339,8 +339,8 @@ export function Header() {
                 </Link>
 
                 <div className="pt-6 border-t border-border space-y-4">
-                  <Button className="w-full" size="lg">
-                    Get a Quote
+                  <Button className="w-full" size="lg" asChild>
+                    <Link href="/get-a-quote" onClick={() => setMobileMenuOpen(false)}>Get a Quote &rarr;</Link>
                   </Button>
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <a href="tel:+902123456789" className="flex items-center gap-2">
